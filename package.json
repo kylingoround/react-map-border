@@ -1,0 +1,37 @@
+{
+  "name": "react-simple-map-example",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "main": "src/index.js",
+  "dependencies": {
+    "d3-geo": "1.11.6",
+    "dat.gui": "0.7.6",
+    "dis-gui": "2.1.0",
+    "react": "16.8.6",
+    "react-dat-gui": "3.0.0",
+    "react-dom": "16.8.6",
+    "react-hint": "3.2.0",
+    "react-scripts": "3.0.1",
+    "react-simple-maps": "0.12.1",
+    "react-tooltip": "3.10.0",
+    "redux-tooltip": "0.7.2",
+    "styled-components": "4.3.2",
+    "topojson-client": "3.0.0"
+  },
+  "devDependencies": {
+    "typescript": "3.3.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
