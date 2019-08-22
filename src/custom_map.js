@@ -224,17 +224,19 @@ class WorldMap extends Component {
           </g>
           <g className="markers">
             {this.state.cities.map((city, i) => (
-              <circle
-                key={`marker-${i}`}
-                cx={mapProjection()(city.coordinates)[0]}
-                cy={mapProjection()(city.coordinates)[1]}
-                r={city.population / 3000000}
-                fill="#E91E63"
-                stroke="#FFFFFF"
-                className="marker"
-                onClick={() => this.handleMarkerClick(i)}
-                data-rh="Top"
-              />
+              // <>{console.log(city.coordinates)}</>
+              <>{console.log(mapProjection()(city.coordinates))}</>
+              // <circle
+              //   key={`marker-${i}`}
+              //   cx={mapProjection()(city.coordinates)[0]}
+              //   cy={mapProjection()(city.coordinates)[1]}
+              //   r={city.population / 3000000}
+              //   fill="#E91E63"
+              //   stroke="#FFFFFF"
+              //   className="marker"
+              //   onClick={() => this.handleMarkerClick(i)}
+              //   data-rh="Top"
+              // />
             ))}
           </g>
         </SVGBox>
