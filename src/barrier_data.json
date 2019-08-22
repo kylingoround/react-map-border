@@ -15,7 +15,7 @@
       "long": "-117.1219444"
     },
     "length": "",
-    "type": "",
+    "purpose": "",
     "description": "This is the U.S.-Mexico Border",
     "entity_1": "US",
     "entity_2": "Mexico",
@@ -28,7 +28,7 @@
       "country_1_data": {},
       "country_2_data": {}
     },
-    "resources_and_references": []
+    "resources": []
   },
   {
     "border_id": "Belize–Guatemala",
@@ -36,135 +36,167 @@
     "built-status": ["proposed", "agreed"],
     "built-year": "N/A",
     "coordinates": {
-      "raw": "32°32′4″N 117°7′19″W",
-      "lat": "32.5344444",
-      "long": "-117.1219444"
+      "raw": "17.1820337999° N, 89.304135° W",
+      "lat": "17.203379",
+      "long": "-89.304135"
     },
     "length": "N/A",
-    "type": ["disputed territory", "anti-illegal immigration"],
-    "description": "",
+    "purpose": ["disputed territory", "anti-illegal immigration"],
+    "description": "The Belizean–Guatemalan territorial dispute is an unresolved binational territorial dispute between the states of Belize and Guatemala, neighbours in Central America. The territory of Belize has been claimed in whole or in part by Guatemala since 1821.",
     "entity_1": "Belize",
-    "entity_2": "N/A",
+    "entity_2": "Guatemala",
     "technologies": []
   },
   {
     "border_id": "Botswana/Zimbabwe",
-    "border_name": "",
+    "border_name": "Botswana/Zimbabwe",
     "built-status": ["built"],
     "built-year": 2003,
     "coordinates": {
-      "raw": "",
-      "lat": "",
-      "long": ""
+      "raw": "20.483349°S, 27.275201°E",
+      "lat": "-20.483349",
+      "long": "27.275201"
     },
-    "length": "",
-    "type": [],
+    "length": "500",
+    "purpose": ["anti-illegal immigration"],
     "description": "",
     "entity_1": "Botswana",
     "entity_2": "Zimbabwe",
-    "technologies": []
+    "technologies": [],
+    "thumbnail": "http://news.bbcimg.co.uk/media/images/46672000/jpg/_46672766_fence-blog11.jpg",
+    "resources": [
+      {
+        "link": "http://news.bbc.co.uk/2/hi/africa/8343505.stm",
+        "description": "On the 20th anniversary of the fall of the Berlin Wall, BBC Mundo looks at barriers which are still standing - or have gone up since - around the world."
+      }
+    ]
   },
   {
     "border_id": "Brunei/Limbang",
-    "border_name": "",
-    "built-status": [],
-    "built-year": "N/A",
+    "border_name": "Brunei/Limbang",
+    "built-status": ["built"],
+    "built-year": "2005",
     "coordinates": {
-      "raw": "",
-      "lat": "",
-      "long": ""
+      "raw": "4.742728^N 115.021246^E",
+      "lat": "4.742728",
+      "long": "115.021246"
     },
-    "length": "",
-    "type": [],
+    "length": "20",
+    "purpose": ["anti-illegal immigration"],
     "description": "",
-    "entity_1": "",
-    "entity_2": "",
-    "technologies": []
+    "entity_1": "Brunei",
+    "entity_2": "Limbang - Malaysia",
+    "technologies": [],
+    "resources": [],
+    "thumbnail": ""
   },
   {
     "border_id": "Bulgaria/Turkey",
-    "border_name": "",
-    "built-status": [],
-    "built-year": "N/A",
+    "border_name": "Bulgaria/Turkey",
+    "built-status": ["built"],
+    "built-year": "2014",
     "coordinates": {
-      "raw": "",
-      "lat": "",
-      "long": ""
+      "raw": "41.787063^N, 26.362293^E",
+      "lat": "41.787063",
+      "long": "26.362293"
     },
-    "length": "",
-    "type": [],
+    "length": "30",
+    "purpose": ["anti-illegal immigration"],
     "description": "",
-    "entity_1": "",
-    "entity_2": "",
-    "technologies": []
+    "entity_1": "Bulgaria",
+    "entity_2": "Turkey",
+    "technologies": [],
+    "resources": [],
+    "thumbnail": ""
   },
   {
     "border_id": "Ceuta border fence",
     "border_name": "",
-    "built-status": [],
-    "built-year": "N/A",
+    "built-status": ["built"],
+    "built-year": "2001",
     "coordinates": {
-      "raw": "",
-      "lat": "",
-      "long": ""
+      "raw": "35.893080^N 5.322301^W",
+      "lat": "35.893080",
+      "long": "-5.322301"
     },
-    "length": "",
-    "type": [],
-    "description": "",
-    "entity_1": "",
-    "entity_2": "",
-    "technologies": []
+    "length": "8.4",
+    "height": "6",
+    "purpose": ["anti-illegal immigration"],
+    "description": "The Ceuta border fence forms part of the Morocco–Spain border[1] at Ceuta, a city on the North African coast. Constructed by Spain, its purpose is to prevent smuggling and to stop migrants from entering Europe. Morocco objected to the construction of the barrier since it does not recognize Spanish sovereignty in Ceuta.",
+    "entity_1": "Spain",
+    "entity_2": "Morocco",
+    "technologies": [
+      "barbed wire",
+      "watchpost",
+      "patrol",
+      "noise sensor",
+      "movement sensor",
+      "ambulance"
+    ],
+    "resources": ["https://www.wikiwand.com/en/Ceuta_border_fence"],
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/CeutaBorderFence.jpg/640px-CeutaBorderFence.jpg"
   },
   {
     "border_id": "China/Hong Kong",
-    "border_name": "",
-    "built-status": [],
-    "built-year": "N/A",
+    "border_name": "The Frontier Closed Area",
+    "built-status": ["built"],
+    "built-year": "1960",
     "coordinates": {
-      "raw": "",
-      "lat": "",
-      "long": ""
+      "raw": "22.517283^N 114.069006^E",
+      "lat": "22.517283",
+      "long": "114.069006"
     },
-    "length": "",
-    "type": [],
-    "description": "",
-    "entity_1": "",
+    "length": "32",
+    "purpose": ["anti-illegal immigration"],
+    "description": "The Frontier Closed Area, established by the Frontier Closed Area Order, 1951,[1] is a border zone area in Hong Kong, extended inwards from the border with China. For anyone to enter the area, a Closed Area Permit is required. Established to prevent migrants from China and other illegal activities, the closed area is fenced along its perimeter to serve as a buffer between the closed border and the rest of the territory. Developments are tightly controlled within the area, leading to less construction and causing most of the area to become a natural habitat for animals and plants.",
+    "entity_1": "Hong Kong",
     "entity_2": "",
-    "technologies": []
+    "technologies": [],
+    "resources": ["https://www.wikiwand.com/en/Frontier_Closed_Area"],
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Liantang%2C_Shenzhen_as_viewed_from_Ta_Kwu_Ling%2C_a_formerly_restricted_area.jpg/440px-Liantang%2C_Shenzhen_as_viewed_from_Ta_Kwu_Ling%2C_a_formerly_restricted_area.jpg"
   },
   {
     "border_id": "Costa Rica/Nicaragua",
     "border_name": "",
-    "built-status": [],
+    "built-status": ["Proposed"],
     "built-year": "N/A",
     "coordinates": {
-      "raw": "",
-      "lat": "",
-      "long": ""
+      "raw": "11.026543^N 84.308597^W",
+      "lat": "11.026543",
+      "long": "-84.308597"
     },
-    "length": "",
-    "type": [],
-    "description": "",
-    "entity_1": "",
-    "entity_2": "",
-    "technologies": []
+    "length": "N/A",
+    "purpose": ["anti-illegal immigration"],
+    "description": "The Nicaragua–Costa Rica San Juan River border dispute is a series of periodical conflicts between the two Central American nations over the correct delimitation of their common border at its east-end, and the interpretation of the navigation rights on the San Juan River established in the Cañas-Jerez Treaty of 1858. The most recent disputes include an interpretation about the scope and limits of Costa Rica's rights for free navigation and Nicaragua's sovereign control over the San Juan River, which was resolved by the International Court of Justice in 2009; and the ongoing dispute that began in October 2010 regarding the dredging of San Juan River, in the area of Isla Calero.",
+    "entity_1": "Costa Rica",
+    "entity_2": "Nicaragua",
+    "technologies": [],
+    "resources": [
+      "https://www.wikiwand.com/en/Costa_Rica%E2%80%93Nicaragua_San_Juan_River_border_dispute"
+    ],
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Alexander97.jpg/440px-Alexander97.jpg"
   },
   {
-    "border_id": "Chinese–Korean border fence",
-    "border_name": "",
-    "built-status": [],
+    "border_id": "Chinese–Korean-border-fence",
+    "visibility": false,
+    "border_name": "Chinese–Korean border fence",
+    "built-status": ["Under construction"],
     "built-year": "N/A",
     "coordinates": {
-      "raw": "",
-      "lat": "",
-      "long": ""
+      "raw": "40.877177^N, 125.941587^E",
+      "lat": "40.877177",
+      "long": "125.941587"
     },
-    "length": "",
-    "type": [],
-    "description": "",
-    "entity_1": "",
-    "entity_2": "",
-    "technologies": []
+    "length": "1416",
+    "purpose": ["anti-illegal immigration"],
+    "description": "Fences more than 13ft high, topped with barbed wire, are now being erected along an eight-mile stretch of the Yalu river around the Chinese city of Dandong. This is a popular escape point for North Korea refugees seeking food or better lives, Korea's Yonhap news agency reported.",
+    "entity_1": "China",
+    "entity_2": "Korea",
+    "technologies": ["barbed wire"],
+    "resources": [
+      "https://www.telegraph.co.uk/news/worldnews/asia/northkorea/8415490/China-builds-higher-fences-over-fears-of-instability-in-North-Korea.html"
+    ],
+    "thumbnail": "https://secure.i.telegraph.co.uk/multimedia/archive/01860/china-fence-korea_1860133c.jpg"
   },
   {
     "border_id": "Egypt–Gaza barrier",
@@ -177,11 +209,13 @@
       "long": ""
     },
     "length": "",
-    "type": [],
+    "purpose": [],
     "description": "",
     "entity_1": "",
     "entity_2": "",
-    "technologies": []
+    "technologies": [],
+    "resources": [],
+    "thumbnail": ""
   },
   {
     "border_id": "Estonia–Russia border fence",
@@ -194,11 +228,13 @@
       "long": ""
     },
     "length": "",
-    "type": [],
+    "purpose": [],
     "description": "",
     "entity_1": "",
     "entity_2": "",
-    "technologies": []
+    "technologies": [],
+    "resources": [],
+    "thumbnail": ""
   },
   {
     "border_id": "North Macedonia–Greece barrier",
@@ -211,11 +247,13 @@
       "long": ""
     },
     "length": "",
-    "type": [],
+    "purpose": [],
     "description": "",
     "entity_1": "",
     "entity_2": "",
-    "technologies": []
+    "technologies": [],
+    "resources": [],
+    "thumbnail": ""
   },
   {
     "border_id": "Malaysia–Thailand border",
@@ -228,11 +266,13 @@
       "long": ""
     },
     "length": "",
-    "type": [],
+    "purpose": [],
     "description": "",
     "entity_1": "",
     "entity_2": "",
-    "technologies": []
+    "technologies": [],
+    "resources": [],
+    "thumbnail": ""
   },
   {
     "border_id": "Melilla border fence",
@@ -245,11 +285,13 @@
       "long": ""
     },
     "length": "",
-    "type": [],
+    "purpose": [],
     "description": "",
     "entity_1": "",
     "entity_2": "",
-    "technologies": []
+    "technologies": [],
+    "resources": [],
+    "thumbnail": ""
   },
   {
     "border_id": "Hungary–Serbia barrier",
@@ -262,11 +304,12 @@
       "long": ""
     },
     "length": "",
-    "type": [],
+    "purpose": [],
     "description": "",
     "entity_1": "",
     "entity_2": "",
-    "technologies": []
+    "technologies": [],
+    "resources": []
   },
   {
     "border_id": "Hungary–Croatia barrier",
@@ -279,11 +322,13 @@
       "long": ""
     },
     "length": "",
-    "type": [],
+    "purpose": [],
     "description": "",
     "entity_1": "",
     "entity_2": "",
-    "technologies": []
+    "technologies": [],
+    "resources": [],
+    "thumbnail": ""
   },
   {
     "border_id": "India–Myanmar barrier",
@@ -296,11 +341,13 @@
       "long": ""
     },
     "length": "",
-    "type": [],
+    "purpose": [],
     "description": "",
     "entity_1": "",
     "entity_2": "",
-    "technologies": []
+    "technologies": [],
+    "resources": [],
+    "thumbnail": ""
   },
   {
     "border_id": "Indian Kashmir barrier",
@@ -313,11 +360,13 @@
       "long": ""
     },
     "length": "",
-    "type": [],
+    "purpose": [],
     "description": "",
     "entity_1": "",
     "entity_2": "",
-    "technologies": []
+    "technologies": [],
+    "resources": [],
+    "thumbnail": ""
   },
   {
     "border_id": "Iran–Pakistan barrier",
@@ -330,11 +379,13 @@
       "long": ""
     },
     "length": "",
-    "type": [],
+    "purpose": [],
     "description": "",
     "entity_1": "",
     "entity_2": "",
-    "technologies": []
+    "technologies": [],
+    "resources": [],
+    "thumbnail": ""
   },
   {
     "border_id": "Kazakhstan–Uzbekistan barrier",
@@ -347,11 +398,13 @@
       "long": ""
     },
     "length": "",
-    "type": [],
+    "purpose": [],
     "description": "",
     "entity_1": "",
     "entity_2": "",
-    "technologies": []
+    "technologies": [],
+    "resources": [],
+    "thumbnail": ""
   },
   {
     "border_id": "Korean Demilitarized Zone",
@@ -364,11 +417,13 @@
       "long": ""
     },
     "length": "",
-    "type": [],
+    "purpose": [],
     "description": "",
     "entity_1": "",
     "entity_2": "",
-    "technologies": []
+    "technologies": [],
+    "resources": [],
+    "thumbnail": ""
   },
   {
     "border_id": "Kruger National Park",
@@ -381,11 +436,13 @@
       "long": ""
     },
     "length": "",
-    "type": [],
+    "purpose": [],
     "description": "",
     "entity_1": "",
     "entity_2": "",
-    "technologies": []
+    "technologies": [],
+    "resources": [],
+    "thumbnail": ""
   },
   {
     "border_id": "South Africa/Zimbabwe Border",
@@ -398,11 +455,13 @@
       "long": ""
     },
     "length": "",
-    "type": [],
+    "purpose": [],
     "description": "",
     "entity_1": "",
     "entity_2": "",
-    "technologies": []
+    "technologies": [],
+    "resources": [],
+    "thumbnail": ""
   },
   {
     "border_id": "Kuwait–Iraq barrier",
@@ -415,11 +474,13 @@
       "long": ""
     },
     "length": "",
-    "type": [],
+    "purpose": [],
     "description": "",
     "entity_1": "",
     "entity_2": "",
-    "technologies": []
+    "technologies": [],
+    "resources": [],
+    "thumbnail": ""
   },
   {
     "border_id": "Pakistan–Afghanistan barrier",
@@ -432,11 +493,13 @@
       "long": ""
     },
     "length": "",
-    "type": [],
+    "purpose": [],
     "description": "",
     "entity_1": "",
     "entity_2": "",
-    "technologies": []
+    "technologies": [],
+    "resources": [],
+    "thumbnail": ""
   },
   {
     "border_id": "Saudi–Yemen barrier",
@@ -449,11 +512,13 @@
       "long": ""
     },
     "length": "",
-    "type": [],
+    "purpose": [],
     "description": "",
     "entity_1": "",
     "entity_2": "",
-    "technologies": []
+    "technologies": [],
+    "resources": [],
+    "thumbnail": ""
   },
   {
     "border_id": "Saudi–Iraq barrier",
@@ -466,11 +531,13 @@
       "long": ""
     },
     "length": "",
-    "type": [],
+    "purpose": [],
     "description": "",
     "entity_1": "",
     "entity_2": "",
-    "technologies": []
+    "technologies": [],
+    "resources": [],
+    "thumbnail": ""
   },
   {
     "border_id": "Slovenia–Croatia barrier",
@@ -483,11 +550,13 @@
       "long": ""
     },
     "length": "",
-    "type": [],
+    "purpose": [],
     "description": "",
     "entity_1": "",
     "entity_2": "",
-    "technologies": []
+    "technologies": [],
+    "resources": [],
+    "thumbnail": ""
   },
   {
     "border_id": "Turkey–Syria border barrier",
@@ -500,11 +569,13 @@
       "long": ""
     },
     "length": "",
-    "type": [],
+    "purpose": [],
     "description": "",
     "entity_1": "",
     "entity_2": "",
-    "technologies": []
+    "technologies": [],
+    "resources": [],
+    "thumbnail": ""
   },
   {
     "border_id": "Turkey–Iran border barrier",
@@ -517,11 +588,13 @@
       "long": ""
     },
     "length": "",
-    "type": [],
+    "purpose": [],
     "description": "",
     "entity_1": "",
     "entity_2": "",
-    "technologies": []
+    "technologies": [],
+    "resources": [],
+    "thumbnail": ""
   },
   {
     "border_id": "Turkmen–Uzbekistan barrier",
@@ -534,11 +607,13 @@
       "long": ""
     },
     "length": "",
-    "type": [],
+    "purpose": [],
     "description": "",
     "entity_1": "",
     "entity_2": "",
-    "technologies": []
+    "technologies": [],
+    "resources": [],
+    "thumbnail": ""
   },
   {
     "border_id": "Ukraine–Russia barrier",
@@ -551,11 +626,13 @@
       "long": ""
     },
     "length": "",
-    "type": [],
+    "purpose": [],
     "description": "",
     "entity_1": "",
     "entity_2": "",
-    "technologies": []
+    "technologies": [],
+    "resources": [],
+    "thumbnail": ""
   },
   {
     "border_id": "United Arab Emirates–Oman barrier",
@@ -568,11 +645,13 @@
       "long": ""
     },
     "length": "",
-    "type": [],
+    "purpose": [],
     "description": "",
     "entity_1": "",
     "entity_2": "",
-    "technologies": []
+    "technologies": [],
+    "resources": [],
+    "thumbnail": ""
   },
   {
     "border_id": "Mexico–United States barrier",
@@ -585,11 +664,13 @@
       "long": ""
     },
     "length": "",
-    "type": [],
+    "purpose": [],
     "description": "",
     "entity_1": "",
     "entity_2": "",
-    "technologies": []
+    "technologies": [],
+    "resources": [],
+    "thumbnail": ""
   },
   {
     "border_id": "Uzbek–Afghanistan barrier",
@@ -602,11 +683,13 @@
       "long": ""
     },
     "length": "",
-    "type": [],
+    "purpose": [],
     "description": "",
     "entity_1": "",
     "entity_2": "",
-    "technologies": []
+    "technologies": [],
+    "resources": [],
+    "thumbnail": ""
   },
   {
     "border_id": "Uzbek–Kyrgyzstan barrier",
@@ -619,11 +702,13 @@
       "long": ""
     },
     "length": "",
-    "type": [],
+    "purpose": [],
     "description": "",
     "entity_1": "",
     "entity_2": "",
-    "technologies": []
+    "technologies": [],
+    "resources": [],
+    "thumbnail": ""
   },
   {
     "border_id": "Israel-West Bank barrier",
@@ -636,11 +721,13 @@
       "long": ""
     },
     "length": "",
-    "type": [],
+    "purpose": [],
     "description": "",
     "entity_1": "",
     "entity_2": "",
-    "technologies": []
+    "technologies": [],
+    "resources": [],
+    "thumbnail": ""
   },
   {
     "border_id": "Israel-Egypt barrier",
@@ -653,11 +740,13 @@
       "long": ""
     },
     "length": "",
-    "type": [],
+    "purpose": [],
     "description": "",
     "entity_1": "",
     "entity_2": "",
-    "technologies": []
+    "technologies": [],
+    "resources": [],
+    "thumbnail": ""
   },
   {
     "border_id": "Israel-Lebanon barrier",
@@ -670,11 +759,13 @@
       "long": ""
     },
     "length": "",
-    "type": [],
+    "purpose": [],
     "description": "",
     "entity_1": "",
     "entity_2": "",
-    "technologies": []
+    "technologies": [],
+    "resources": [],
+    "thumbnail": ""
   },
   {
     "border_id": "Israel-Gaza barrier",
@@ -687,10 +778,13 @@
       "long": ""
     },
     "length": "",
-    "type": [],
+    "purpose": [],
     "description": "",
     "entity_1": "",
     "entity_2": "",
-    "technologies": []
-  }
+    "technologies": [],
+    "resources": [],
+    "thumbnail": ""
+  },
+  { "Northern Ireland": "" }
 ]

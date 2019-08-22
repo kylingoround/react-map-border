@@ -8,7 +8,7 @@ import { feature } from "topojson-client";
 import _ from "lodash";
 import * as dg from "dis-gui";
 
-import barrier_data from "./barrier_data.json";
+import barrier_data from "../barrier_data.json";
 
 ////////////////////////////////////////////////////////////////
 // Bugs:
@@ -142,7 +142,7 @@ const CityCirlces = props => (
 
 const MarkerGroup = props => (
   <>
-    <g>
+    {/* <g>
       {props.data.map((barrier, i) =>
         // console.log(props.data)
         <circle
@@ -158,7 +158,7 @@ const MarkerGroup = props => (
       />
         // <BarrierCircle data={barrier.coordinates} index={i} />
       )}
-    </g>
+    </g> */}
     {/* <g>
       {props.cities.map((city, i) => (
         <CityCirlces key={`marker-${i}`} data={city} index={i} />
