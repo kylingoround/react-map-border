@@ -6,17 +6,16 @@ import { geoMiller } from "d3-geo-projection";
 import { feature } from "topojson-client";
 
 import _ from "lodash";
-
-// import DatGui, {
-//   DatBoolean,
-//   DatColor,
-//   DatNumber,
-//   DatString
-// } from "react-dat-gui";
-// import "react-dat-gui/build/react-dat-gui.css";
-
 import * as dg from "dis-gui";
 
+import barrier_data from "./barrier_data.json";
+
+////////////////////////////////////////////////////////////////
+// TODOS
+// markers
+// tooltip
+
+////////////////////////////////////////////////////////////////
 // CSS-in-JS styling
 import styled from "styled-components";
 
@@ -96,6 +95,7 @@ class MapContainer extends Component {
   state = {
     worldData: [],
     countryCode: [],
+    barrierData: [],
     x: 150
   };
   cities = [
@@ -244,6 +244,12 @@ class MapContainer extends Component {
   ];
 
   componentDidMount() {
+    this.fetchCountries();
+    this.fetchCities();
+    this.fetchWalls();
+  }
+
+  fetchCountries() {
     fetch("https://unpkg.com/visionscarto-world-atlas/world/110m.json").then(
       response => {
         if (response.status !== 200) {
@@ -258,7 +264,8 @@ class MapContainer extends Component {
         });
       }
     );
-
+  }
+  fetchCities() {
     fetch(
       "https://raw.githubusercontent.com/lukes/ISO-3166-Countries-with-Regional-Codes/master/all/all.json"
     ).then(response => {
@@ -273,6 +280,11 @@ class MapContainer extends Component {
           // worldData: feature(worldData, worldData.objects.countries).features
         });
       });
+    });
+  }
+  fetchWalls() {
+    this.setState({
+      barrierData: barrier_data
     });
   }
 

@@ -1,0 +1,150 @@
+[
+  {
+    "border_id": "US-Mexico",
+    "border_name": "U.S. - Mexico Border",
+    "built-status": [
+      "Proposed",
+      "agreed",
+      "Planned",
+      "Built Year",
+      "Under Construction"
+    ],
+    "coordinates": {
+      "raw": "32°32′4″N 117°7′19″W",
+      "lat": "32.5344444",
+      "long": "-117.1219444"
+    },
+    "length": "",
+    "type": "",
+    "description": "This is the U.S.-Mexico Border",
+    "country_1": "US",
+    "country_2": "Mexico",
+    "technologies": ["tech1", "tech2"],
+    "economics_data": {
+      "country_1_data": {},
+      "country_2_data": {}
+    },
+    "humanitarian_data": {
+      "country_1_data": {},
+      "country_2_data": {}
+    },
+    "resources_and_references": []
+  },
+  {
+    "border_id": "Belize–Guatemala"
+  },
+  {
+    "border_id": "Botswana/Zimbabwe"
+  },
+  {
+    "border_id": "Brunei/Limbang"
+  },
+  {
+    "border_id": "Bulgaria/Turkey"
+  },
+  {
+    "border_id": "Ceuta border fence"
+  },
+  {
+    "border_id": "China/Hong Kong"
+  },
+  {
+    "border_id": "Costa Rica/Nicaragua"
+  },
+  {
+    "border_id": "Chinese–Korean border fence"
+  },
+  {
+    "border_id": "Egypt–Gaza barrier"
+  },
+  {
+    "border_id": "Estonia–Russia border fence"
+  },
+  {
+    "border_id": "North Macedonia–Greece barrier"
+  },
+  {
+    "border_id": "Malaysia–Thailand border"
+  },
+  {
+    "border_id": "Melilla border fence"
+  },
+  {
+    "border_id": "Hungary–Serbia barrier"
+  },
+  {
+    "border_id": "Hungary–Croatia barrier"
+  },
+  {
+    "border_id": "India–Myanmar barrier"
+  },
+  {
+    "border_id": "Indian Kashmir barrier"
+  },
+  {
+    "border_id": "Iran–Pakistan barrier"
+  },
+  {
+    "border_id": "Kazakhstan–Uzbekistan barrier"
+  },
+  {
+    "border_id": "Korean Demilitarized Zone"
+  },
+  {
+    "border_id": "Kruger National Park"
+  },
+  {
+    "border_id": "South Africa/Zimbabwe Border"
+  },
+  {
+    "border_id": "Kuwait–Iraq barrier"
+  },
+  {
+    "border_id": "Pakistan–Afghanistan barrier"
+  },
+  {
+    "border_id": "Saudi–Yemen barrier"
+  },
+  {
+    "border_id": "Saudi–Iraq barrier"
+  },
+  {
+    "border_id": "Slovenia–Croatia barrier"
+  },
+  {
+    "border_id": "Turkey–Syria border barrier"
+  },
+  {
+    "border_id": "Turkey–Iran border barrier"
+  },
+  {
+    "border_id": "Turkmen–Uzbekistan barrier"
+  },
+  {
+    "border_id": "Ukraine–Russia barrier"
+  },
+  {
+    "border_id": "United Arab Emirates–Oman barrier"
+  },
+  {
+    "border_id": "Mexico–United States barrier"
+  },
+  {
+    "border_id": "Uzbek–Afghanistan barrier"
+  },
+  {
+    "border_id": "Uzbek–Kyrgyzstan barrier"
+  },
+  {
+    "border_id": "Israel-West Bank barrier"
+  },
+  {
+    "border_id": "Israel-Egypt barrier"
+  },
+  {
+    "border_id": "Israel-Lebanon barrier"
+  },
+  {
+    "border_id": "Israel-Gaza barrier"
+  }
+]

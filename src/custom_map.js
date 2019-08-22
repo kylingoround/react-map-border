@@ -9,7 +9,7 @@ const ReactHint = ReactHintFactory(React);
 
 // a topojson file contain paths
 // translate geographical data into coordinates (topojson client and d3-geo)
-//    d3-geo also contains projections
+// d3-geo also contains projections
 
 // rotate projections
 
