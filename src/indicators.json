@@ -1,0 +1,455 @@
+[
+  { "page": 1, "pages": 341, "per_page": "50", "total": 17016 },
+  [
+    {
+      "id": "1.0.HCount.1.90usd",
+      "name": "Poverty Headcount ($1.90 a day)",
+      "unit": "",
+      "source": { "id": "37", "value": "LAC Equity Lab" },
+      "sourceNote": "The poverty headcount index measures the proportion of the population with daily per capita income (in 2011 PPP) below the poverty line.",
+      "sourceOrganization": "LAC Equity Lab tabulations of SEDLAC (CEDLAS and the World Bank).",
+      "topics": [{ "id": "11", "value": "Poverty " }]
+    },
+    {
+      "id": "1.0.HCount.2.5usd",
+      "name": "Poverty Headcount ($2.50 a day)",
+      "unit": "",
+      "source": { "id": "37", "value": "LAC Equity Lab" },
+      "sourceNote": "The poverty headcount index measures the proportion of the population with daily per capita income (in 2005 PPP) below the poverty line.",
+      "sourceOrganization": "LAC Equity Lab tabulations of SEDLAC (CEDLAS and the World Bank).",
+      "topics": [{ "id": "11", "value": "Poverty " }]
+    },
+    {
+      "id": "1.0.HCount.Mid10to50",
+      "name": "Middle Class ($10-50 a day) Headcount",
+      "unit": "",
+      "source": { "id": "37", "value": "LAC Equity Lab" },
+      "sourceNote": "The poverty headcount index measures the proportion of the population with daily per capita income (in 2005 PPP) below the poverty line.",
+      "sourceOrganization": "LAC Equity Lab tabulations of SEDLAC (CEDLAS and the World Bank).",
+      "topics": [{ "id": "11", "value": "Poverty " }]
+    },
+    {
+      "id": "1.0.HCount.Ofcl",
+      "name": "Official Moderate Poverty Rate-National",
+      "unit": "",
+      "source": { "id": "37", "value": "LAC Equity Lab" },
+      "sourceNote": "The poverty headcount index measures the proportion of the population with daily per capita income below the official poverty line developed by each country.",
+      "sourceOrganization": "LAC Equity Lab tabulations of data from National Statistical Offices.",
+      "topics": [{ "id": "11", "value": "Poverty " }]
+    },
+    {
+      "id": "1.0.HCount.Poor4uds",
+      "name": "Poverty Headcount ($4 a day)",
+      "unit": "",
+      "source": { "id": "37", "value": "LAC Equity Lab" },
+      "sourceNote": "The poverty headcount index measures the proportion of the population with daily per capita income (in 2005 PPP) below the poverty line.",
+      "sourceOrganization": "LAC Equity Lab tabulations of SEDLAC (CEDLAS and the World Bank).",
+      "topics": [{ "id": "11", "value": "Poverty " }]
+    },
+    {
+      "id": "1.0.HCount.Vul4to10",
+      "name": "Vulnerable ($4-10 a day) Headcount",
+      "unit": "",
+      "source": { "id": "37", "value": "LAC Equity Lab" },
+      "sourceNote": "The poverty headcount index measures the proportion of the population with daily per capita income (in 2005 PPP) below the poverty line.",
+      "sourceOrganization": "LAC Equity Lab tabulations of SEDLAC (CEDLAS and the World Bank).",
+      "topics": [{ "id": "11", "value": "Poverty " }]
+    },
+    {
+      "id": "1.0.PGap.1.90usd",
+      "name": "Poverty Gap ($1.90 a day)",
+      "unit": "",
+      "source": { "id": "37", "value": "LAC Equity Lab" },
+      "sourceNote": "The poverty gap captures the mean aggregate income or consumption shortfall relative to the poverty line across the entire population. It measures the total resources needed to bring all the poor to the level of the poverty line (averaged over the total population). ",
+      "sourceOrganization": "LAC Equity Lab tabulations of SEDLAC (CEDLAS and the World Bank).",
+      "topics": [{ "id": "11", "value": "Poverty " }]
+    },
+    {
+      "id": "1.0.PGap.2.5usd",
+      "name": "Poverty Gap ($2.50 a day)",
+      "unit": "",
+      "source": { "id": "37", "value": "LAC Equity Lab" },
+      "sourceNote": "The poverty gap captures the mean aggregate income or consumption shortfall relative to the poverty line across the entire population. It measures the total resources needed to bring all the poor to the level of the poverty line (averaged over the total population). ",
+      "sourceOrganization": "LAC Equity Lab tabulations of SEDLAC (CEDLAS and the World Bank).",
+      "topics": [{ "id": "11", "value": "Poverty " }]
+    },
+    {
+      "id": "1.0.PGap.Poor4uds",
+      "name": "Poverty Gap ($4 a day)",
+      "unit": "",
+      "source": { "id": "37", "value": "LAC Equity Lab" },
+      "sourceNote": "The poverty gap captures the mean aggregate income or consumption shortfall relative to the poverty line across the entire population. It measures the total resources needed to bring all the poor to the level of the poverty line (averaged over the total population). ",
+      "sourceOrganization": "LAC Equity Lab tabulations of SEDLAC (CEDLAS and the World Bank).",
+      "topics": [{ "id": "11", "value": "Poverty " }]
+    },
+    {
+      "id": "1.0.PSev.1.90usd",
+      "name": "Poverty Severity ($1.90 a day)",
+      "unit": "",
+      "source": { "id": "37", "value": "LAC Equity Lab" },
+      "sourceNote": "The poverty severity index combines information on both poverty and inequality among the poor by averaging the squares of the poverty gaps relative the poverty line",
+      "sourceOrganization": "LAC Equity Lab tabulations of SEDLAC (CEDLAS and the World Bank).",
+      "topics": [{ "id": "11", "value": "Poverty " }]
+    },
+    {
+      "id": "1.0.PSev.2.5usd",
+      "name": "Poverty Severity ($2.50 a day)",
+      "unit": "",
+      "source": { "id": "37", "value": "LAC Equity Lab" },
+      "sourceNote": "The poverty severity index combines information on both poverty and inequality among the poor by averaging the squares of the poverty gaps relative the poverty line",
+      "sourceOrganization": "LAC Equity Lab tabulations of SEDLAC (CEDLAS and the World Bank).",
+      "topics": [{ "id": "11", "value": "Poverty " }]
+    },
+    {
+      "id": "1.0.PSev.Poor4uds",
+      "name": "Poverty Severity ($4 a day)",
+      "unit": "",
+      "source": { "id": "37", "value": "LAC Equity Lab" },
+      "sourceNote": "The poverty severity index combines information on both poverty and inequality among the poor by averaging the squares of the poverty gaps relative the poverty line",
+      "sourceOrganization": "LAC Equity Lab tabulations of SEDLAC (CEDLAS and the World Bank).",
+      "topics": [{ "id": "11", "value": "Poverty " }]
+    },
+    {
+      "id": "1.1.HCount.1.90usd",
+      "name": "Poverty Headcount ($1.90 a day)-Rural",
+      "unit": "",
+      "source": { "id": "37", "value": "LAC Equity Lab" },
+      "sourceNote": "The poverty headcount index measures the proportion of the population with daily per capita income (in 2011 PPP) below the poverty line.",
+      "sourceOrganization": "LAC Equity Lab tabulations of SEDLAC (CEDLAS and the World Bank).",
+      "topics": [{ "id": "11", "value": "Poverty " }]
+    },
+    {
+      "id": "1.1.HCount.2.5usd",
+      "name": "Poverty Headcount ($2.50 a day)-Rural",
+      "unit": "",
+      "source": { "id": "37", "value": "LAC Equity Lab" },
+      "sourceNote": "The poverty headcount index measures the proportion of the population with daily per capita income (in 2005 PPP) below the poverty line.",
+      "sourceOrganization": "LAC Equity Lab tabulations of SEDLAC (CEDLAS and the World Bank).",
+      "topics": [{ "id": "11", "value": "Poverty " }]
+    },
+    {
+      "id": "1.1.HCount.Mid10to50",
+      "name": "Middle Class ($10-50 a day) Headcount-Rural",
+      "unit": "",
+      "source": { "id": "37", "value": "LAC Equity Lab" },
+      "sourceNote": "The poverty headcount index measures the proportion of the population with daily per capita income (in 2005 PPP) below the poverty line.",
+      "sourceOrganization": "LAC Equity Lab tabulations of SEDLAC (CEDLAS and the World Bank).",
+      "topics": [{ "id": "11", "value": "Poverty " }]
+    },
+    {
+      "id": "1.1.HCount.Ofcl",
+      "name": "Official Moderate Poverty Rate- Rural",
+      "unit": "",
+      "source": { "id": "37", "value": "LAC Equity Lab" },
+      "sourceNote": "The poverty headcount index measures the proportion of the population with daily per capita income below the official poverty line developed by each country.",
+      "sourceOrganization": "LAC Equity Lab tabulations of data from National Statistical Offices.",
+      "topics": [{ "id": "11", "value": "Poverty " }]
+    },
+    {
+      "id": "1.1.HCount.Poor4uds",
+      "name": "Poverty Headcount ($4 a day)-Rural",
+      "unit": "",
+      "source": { "id": "37", "value": "LAC Equity Lab" },
+      "sourceNote": "The poverty headcount index measures the proportion of the population with daily per capita income (in 2005 PPP) below the poverty line.",
+      "sourceOrganization": "LAC Equity Lab tabulations of SEDLAC (CEDLAS and the World Bank).",
+      "topics": [{ "id": "11", "value": "Poverty " }]
+    },
+    {
+      "id": "1.1.HCount.Vul4to10",
+      "name": "Vulnerable ($4-10 a day) Headcount-Rural",
+      "unit": "",
+      "source": { "id": "37", "value": "LAC Equity Lab" },
+      "sourceNote": "The poverty headcount index measures the proportion of the population with daily per capita income (in 2005 PPP) below the poverty line.",
+      "sourceOrganization": "LAC Equity Lab tabulations of SEDLAC (CEDLAS and the World Bank).",
+      "topics": [{ "id": "11", "value": "Poverty " }]
+    },
+    {
+      "id": "1.1.PGap.1.90usd",
+      "name": "Poverty Gap ($1.90 a day)-Rural",
+      "unit": "",
+      "source": { "id": "37", "value": "LAC Equity Lab" },
+      "sourceNote": "The poverty gap captures the mean aggregate income or consumption shortfall relative to the poverty line across the entire population. It measures the total resources needed to bring all the poor to the level of the poverty line (averaged over the total population). ",
+      "sourceOrganization": "LAC Equity Lab tabulations of SEDLAC (CEDLAS and the World Bank).",
+      "topics": [{ "id": "11", "value": "Poverty " }]
+    },
+    {
+      "id": "1.1.PGap.2.5usd",
+      "name": "Poverty Gap ($2.50 a day)-Rural",
+      "unit": "",
+      "source": { "id": "37", "value": "LAC Equity Lab" },
+      "sourceNote": "The poverty gap captures the mean aggregate income or consumption shortfall relative to the poverty line across the entire population. It measures the total resources needed to bring all the poor to the level of the poverty line (averaged over the total population). ",
+      "sourceOrganization": "LAC Equity Lab tabulations of SEDLAC (CEDLAS and the World Bank).",
+      "topics": [{ "id": "11", "value": "Poverty " }]
+    },
+    {
+      "id": "1.1.PGap.Poor4uds",
+      "name": "Poverty Gap ($4 a day)-Rural",
+      "unit": "",
+      "source": { "id": "37", "value": "LAC Equity Lab" },
+      "sourceNote": "The poverty gap captures the mean aggregate income or consumption shortfall relative to the poverty line across the entire population. It measures the total resources needed to bring all the poor to the level of the poverty line (averaged over the total population). ",
+      "sourceOrganization": "LAC Equity Lab tabulations of SEDLAC (CEDLAS and the World Bank).",
+      "topics": [{ "id": "11", "value": "Poverty " }]
+    },
+    {
+      "id": "1.1.PSev.1.90usd",
+      "name": "Poverty Severity ($1.90 a day)-Rural",
+      "unit": "",
+      "source": { "id": "37", "value": "LAC Equity Lab" },
+      "sourceNote": "The poverty severity index combines information on both poverty and inequality among the poor by averaging the squares of the poverty gaps relative the poverty line",
+      "sourceOrganization": "LAC Equity Lab tabulations of SEDLAC (CEDLAS and the World Bank).",
+      "topics": [{ "id": "11", "value": "Poverty " }]
+    },
+    {
+      "id": "1.1.PSev.2.5usd",
+      "name": "Poverty Severity ($2.50 a day)-Rural",
+      "unit": "",
+      "source": { "id": "37", "value": "LAC Equity Lab" },
+      "sourceNote": "The poverty severity index combines information on both poverty and inequality among the poor by averaging the squares of the poverty gaps relative the poverty line",
+      "sourceOrganization": "LAC Equity Lab tabulations of SEDLAC (CEDLAS and the World Bank).",
+      "topics": [{ "id": "11", "value": "Poverty " }]
+    },
+    {
+      "id": "1.1.PSev.Poor4uds",
+      "name": "Poverty Severity ($4 a day)-Rural",
+      "unit": "",
+      "source": { "id": "37", "value": "LAC Equity Lab" },
+      "sourceNote": "The poverty severity index combines information on both poverty and inequality among the poor by averaging the squares of the poverty gaps relative the poverty line",
+      "sourceOrganization": "LAC Equity Lab tabulations of SEDLAC (CEDLAS and the World Bank).",
+      "topics": [{ "id": "11", "value": "Poverty " }]
+    },
+    {
+      "id": "1.1_ACCESS.ELECTRICITY.TOT",
+      "name": "Access to electricity (% of total population)",
+      "unit": "",
+      "source": { "id": "35", "value": "Sustainable Energy for All" },
+      "sourceNote": "Access to electricity is the percentage of population with access to electricity.",
+      "sourceOrganization": "World Bank Global Electrification Database 2012",
+      "topics": []
+    },
+    {
+      "id": "1.1_TOTAL.FINAL.ENERGY.CONSUM",
+      "name": "Total final energy consumption (TFEC)",
+      "unit": "",
+      "source": { "id": "35", "value": "Sustainable Energy for All" },
+      "sourceNote": "Total final energy consumption (TFEC): This indicator is derived form energy balances statistics and is equivalent to total final consumption excluding non-energy use.",
+      "sourceOrganization": "World Bank and International Energy Agency (IEA Statistics © OECD/IEA, http://www.iea.org/stats/index.asp).  ",
+      "topics": []
+    },
+    {
+      "id": "1.1_YOUTH.LITERACY.RATE",
+      "name": "Literacy rate, youth total (% of people ages 15-24) ",
+      "unit": "",
+      "source": { "id": "34", "value": "Global Partnership for Education" },
+      "sourceNote": "The number of persons aged 15 to 24 years who can both read and write with understanding a short simple statement on their everyday life, divided by the population in that age group. Generally, ‘literacy’ also encompasses ‘numeracy’, the ability to make simple arithmetic calculations. For further country-specific definition details please refer to the source of information, the UNESCO Institute for Statistics (UIS): www.uis.unesco.org",
+      "sourceOrganization": "Source of information: UNESCO Institute for Statistics (www.uis.unesco.org). Please refer to its website for country-specific details on the specific national data sources and method used. ",
+      "topics": []
+    },
+    {
+      "id": "1.2.HCount.1.90usd",
+      "name": "Poverty Headcount ($1.90 a day)-Urban",
+      "unit": "",
+      "source": { "id": "37", "value": "LAC Equity Lab" },
+      "sourceNote": "The poverty headcount index measures the proportion of the population with daily per capita income (in 2011 PPP) below the poverty line.",
+      "sourceOrganization": "LAC Equity Lab tabulations of SEDLAC (CEDLAS and the World Bank).",
+      "topics": [{ "id": "11", "value": "Poverty " }]
+    },
+    {
+      "id": "1.2.HCount.2.5usd",
+      "name": "Poverty Headcount ($2.50 a day)-Urban",
+      "unit": "",
+      "source": { "id": "37", "value": "LAC Equity Lab" },
+      "sourceNote": "The poverty headcount index measures the proportion of the population with daily per capita income (in 2005 PPP) below the poverty line.",
+      "sourceOrganization": "LAC Equity Lab tabulations of SEDLAC (CEDLAS and the World Bank).",
+      "topics": [{ "id": "11", "value": "Poverty " }]
+    },
+    {
+      "id": "1.2.HCount.Mid10to50",
+      "name": "Middle Class ($10-50 a day) Headcount-Urban",
+      "unit": "",
+      "source": { "id": "37", "value": "LAC Equity Lab" },
+      "sourceNote": "The poverty headcount index measures the proportion of the population with daily per capita income (in 2005 PPP) below the poverty line.",
+      "sourceOrganization": "LAC Equity Lab tabulations of SEDLAC (CEDLAS and the World Bank).",
+      "topics": [{ "id": "11", "value": "Poverty " }]
+    },
+    {
+      "id": "1.2.HCount.Ofcl",
+      "name": "Official Moderate Poverty Rate-Urban",
+      "unit": "",
+      "source": { "id": "37", "value": "LAC Equity Lab" },
+      "sourceNote": "The poverty headcount index measures the proportion of the population with daily per capita income below the official poverty line developed by each country.",
+      "sourceOrganization": "LAC Equity Lab tabulations of data from National Statistical Offices.",
+      "topics": [{ "id": "11", "value": "Poverty " }]
+    },
+    {
+      "id": "1.2.HCount.Poor4uds",
+      "name": "Poverty Headcount ($4 a day)-Urban",
+      "unit": "",
+      "source": { "id": "37", "value": "LAC Equity Lab" },
+      "sourceNote": "The poverty headcount index measures the proportion of the population with daily per capita income (in 2005 PPP) below the poverty line.",
+      "sourceOrganization": "LAC Equity Lab tabulations of SEDLAC (CEDLAS and the World Bank).",
+      "topics": [{ "id": "11", "value": "Poverty " }]
+    },
+    {
+      "id": "1.2.HCount.Vul4to10",
+      "name": "Vulnerable ($4-10 a day) Headcount-Urban",
+      "unit": "",
+      "source": { "id": "37", "value": "LAC Equity Lab" },
+      "sourceNote": "The poverty headcount index measures the proportion of the population with daily per capita income (in 2005 PPP) below the poverty line.",
+      "sourceOrganization": "LAC Equity Lab tabulations of SEDLAC (CEDLAS and the World Bank).",
+      "topics": [{ "id": "11", "value": "Poverty " }]
+    },
+    {
+      "id": "1.2.PGap.1.90usd",
+      "name": "Poverty Gap ($1.90 a day)-Urban",
+      "unit": "",
+      "source": { "id": "37", "value": "LAC Equity Lab" },
+      "sourceNote": "The poverty gap captures the mean aggregate income or consumption shortfall relative to the poverty line across the entire population. It measures the total resources needed to bring all the poor to the level of the poverty line (averaged over the total population). ",
+      "sourceOrganization": "LAC Equity Lab tabulations of SEDLAC (CEDLAS and the World Bank).",
+      "topics": [{ "id": "11", "value": "Poverty " }]
+    },
+    {
+      "id": "1.2.PGap.2.5usd",
+      "name": "Poverty Gap ($2.50 a day)-Urban",
+      "unit": "",
+      "source": { "id": "37", "value": "LAC Equity Lab" },
+      "sourceNote": "The poverty gap captures the mean aggregate income or consumption shortfall relative to the poverty line across the entire population. It measures the total resources needed to bring all the poor to the level of the poverty line (averaged over the total population). ",
+      "sourceOrganization": "LAC Equity Lab tabulations of SEDLAC (CEDLAS and the World Bank).",
+      "topics": [{ "id": "11", "value": "Poverty " }]
+    },
+    {
+      "id": "1.2.PGap.Poor4uds",
+      "name": "Poverty Gap ($4 a day)-Urban",
+      "unit": "",
+      "source": { "id": "37", "value": "LAC Equity Lab" },
+      "sourceNote": "The poverty gap captures the mean aggregate income or consumption shortfall relative to the poverty line across the entire population. It measures the total resources needed to bring all the poor to the level of the poverty line (averaged over the total population). ",
+      "sourceOrganization": "LAC Equity Lab tabulations of SEDLAC (CEDLAS and the World Bank).",
+      "topics": [{ "id": "11", "value": "Poverty " }]
+    },
+    {
+      "id": "1.2.PSev.1.90usd",
+      "name": "Poverty Severity ($1.90 a day)-Urban",
+      "unit": "",
+      "source": { "id": "37", "value": "LAC Equity Lab" },
+      "sourceNote": "The poverty severity index combines information on both poverty and inequality among the poor by averaging the squares of the poverty gaps relative the poverty line",
+      "sourceOrganization": "LAC Equity Lab tabulations of SEDLAC (CEDLAS and the World Bank).",
+      "topics": [{ "id": "11", "value": "Poverty " }]
+    },
+    {
+      "id": "1.2.PSev.2.5usd",
+      "name": "Poverty Severity ($2.50 a day)-Urban",
+      "unit": "",
+      "source": { "id": "37", "value": "LAC Equity Lab" },
+      "sourceNote": "The poverty severity index combines information on both poverty and inequality among the poor by averaging the squares of the poverty gaps relative the poverty line",
+      "sourceOrganization": "LAC Equity Lab tabulations of SEDLAC (CEDLAS and the World Bank).",
+      "topics": [{ "id": "11", "value": "Poverty " }]
+    },
+    {
+      "id": "1.2.PSev.Poor4uds",
+      "name": "Poverty Severity ($4 a day)-Urban",
+      "unit": "",
+      "source": { "id": "37", "value": "LAC Equity Lab" },
+      "sourceNote": "The poverty severity index combines information on both poverty and inequality among the poor by averaging the squares of the poverty gaps relative the poverty line",
+      "sourceOrganization": "LAC Equity Lab tabulations of SEDLAC (CEDLAS and the World Bank).",
+      "topics": [{ "id": "11", "value": "Poverty " }]
+    },
+    {
+      "id": "1.2_ACCESS.ELECTRICITY.RURAL",
+      "name": "Access to electricity (% of rural population)",
+      "unit": "",
+      "source": { "id": "35", "value": "Sustainable Energy for All" },
+      "sourceNote": "Access to electricity is the percentage of rural population with access to electricity. ",
+      "sourceOrganization": "World Bank Global Electrification Database 2013",
+      "topics": []
+    },
+    {
+      "id": "1.3_ACCESS.ELECTRICITY.URBAN",
+      "name": "Access to electricity (% of urban population)",
+      "unit": "",
+      "source": { "id": "35", "value": "Sustainable Energy for All" },
+      "sourceNote": "Access to electricity is the percentage of total population with access to electricity. ",
+      "sourceOrganization": "World Bank Global Electrification Database 2014",
+      "topics": []
+    },
+    {
+      "id": "2.0.cov.Cel",
+      "name": "Coverage: Mobile Phone",
+      "unit": "",
+      "source": { "id": "37", "value": "LAC Equity Lab" },
+      "sourceNote": "The coverage rate is the childhood access rate of a given opportunity used in calculating the Human Opportunities Index (HOI). The coverage rate does not take into account inequality of access between different circumstance groups.",
+      "sourceOrganization": "LAC Equity Lab tabulations of SEDLAC (CEDLAS and the World Bank).",
+      "topics": [{ "id": "11", "value": "Poverty " }]
+    },
+    {
+      "id": "2.0.cov.Ele",
+      "name": "Coverage: Electricity",
+      "unit": "",
+      "source": { "id": "37", "value": "LAC Equity Lab" },
+      "sourceNote": "The coverage rate is the childhood access rate of a given opportunity used in calculating the Human Opportunities Index (HOI). The coverage rate does not take into account inequality of access between different circumstance groups.",
+      "sourceOrganization": "LAC Equity Lab tabulations of SEDLAC (CEDLAS and the World Bank).",
+      "topics": [{ "id": "11", "value": "Poverty " }]
+    },
+    {
+      "id": "2.0.cov.FPS",
+      "name": "Coverage: Finished Primary School",
+      "unit": "",
+      "source": { "id": "37", "value": "LAC Equity Lab" },
+      "sourceNote": "The coverage rate is the childhood access rate of a given opportunity used in calculating the Human Opportunities Index (HOI). The coverage rate does not take into account inequality of access between different circumstance groups.",
+      "sourceOrganization": "LAC Equity Lab tabulations of SEDLAC (CEDLAS and the World Bank).",
+      "topics": [{ "id": "4", "value": "Education " }]
+    },
+    {
+      "id": "2.0.cov.Int",
+      "name": "Coverage: Internet ",
+      "unit": "",
+      "source": { "id": "37", "value": "LAC Equity Lab" },
+      "sourceNote": "The coverage rate is the childhood access rate of a given opportunity used in calculating the Human Opportunities Index (HOI). The coverage rate does not take into account inequality of access between different circumstance groups.",
+      "sourceOrganization": "LAC Equity Lab tabulations of SEDLAC (CEDLAS and the World Bank).",
+      "topics": [{ "id": "11", "value": "Poverty " }]
+    },
+    {
+      "id": "2.0.cov.Math.pl_2.all",
+      "name": "Coverage: Mathematics Proficiency Level 2",
+      "unit": "",
+      "source": { "id": "37", "value": "LAC Equity Lab" },
+      "sourceNote": "The coverage rate is the childhood access rate of a given opportunity used in calculating the Human Opportunities Index (HOI). The coverage rate does not take into account inequality of access between different circumstance groups.",
+      "sourceOrganization": "LAC Equity Lab tabulations using PISA Data.",
+      "topics": [{ "id": "11", "value": "Poverty " }]
+    },
+    {
+      "id": "2.0.cov.Math.pl_2.prv",
+      "name": "Coverage: Mathematics Proficiency Level 2, Private schools",
+      "unit": "",
+      "source": { "id": "37", "value": "LAC Equity Lab" },
+      "sourceNote": "The coverage rate is the childhood access rate of a given opportunity used in calculating the Human Opportunities Index (HOI). The coverage rate does not take into account inequality of access between different circumstance groups.",
+      "sourceOrganization": "LAC Equity Lab tabulations using PISA Data.",
+      "topics": [{ "id": "11", "value": "Poverty " }]
+    },
+    {
+      "id": "2.0.cov.Math.pl_2.pub",
+      "name": "Coverage: Mathematics Proficiency Level 2, Public schools",
+      "unit": "",
+      "source": { "id": "37", "value": "LAC Equity Lab" },
+      "sourceNote": "The coverage rate is the childhood access rate of a given opportunity used in calculating the Human Opportunities Index (HOI). The coverage rate does not take into account inequality of access between different circumstance groups.",
+      "sourceOrganization": "LAC Equity Lab tabulations using PISA Data.",
+      "topics": [{ "id": "11", "value": "Poverty " }]
+    },
+    {
+      "id": "2.0.cov.Math.pl_3.all",
+      "name": "Coverage: Mathematics Proficiency Level 3",
+      "unit": "",
+      "source": { "id": "37", "value": "LAC Equity Lab" },
+      "sourceNote": "The coverage rate is the childhood access rate of a given opportunity used in calculating the Human Opportunities Index (HOI). The coverage rate does not take into account inequality of access between different circumstance groups.",
+      "sourceOrganization": "LAC Equity Lab tabulations using PISA Data.",
+      "topics": [{ "id": "11", "value": "Poverty " }]
+    },
+    {
+      "id": "2.0.cov.Math.pl_3.prv",
+      "name": "Coverage: Mathematics Proficiency Level 3, Private schools",
+      "unit": "",
+      "source": { "id": "37", "value": "LAC Equity Lab" },
+      "sourceNote": "The coverage rate is the childhood access rate of a given opportunity used in calculating the Human Opportunities Index (HOI). The coverage rate does not take into account inequality of access between different circumstance groups.",
+      "sourceOrganization": "LAC Equity Lab tabulations using PISA Data.",
+      "topics": [{ "id": "11", "value": "Poverty " }]
+    }
+  ]
+]
