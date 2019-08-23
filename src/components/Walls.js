@@ -3,6 +3,14 @@ import styled from "styled-components";
 
 import barrier_data from "../data/barrier_data_updated.json";
 
+// todos
+// drag
+// transition
+// add map
+
+// title: Montserrat 800
+// body: overpass
+
 const Svg = styled.svg`
   width: 100%;
   height: 100%;
@@ -13,13 +21,62 @@ const Svg = styled.svg`
   right: 0;
   /* background-color: teal; */
   position: fixed;
+  z-index: -1;
+`;
+
+const WallPageWrapper = styled.div`
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;
 
 const InfoDivWrapper = styled.div``;
 
 const Img = styled.img`
-  max-width: 200px;
+  /* max-width: 300px; */
+  padding-top: 0.7rem;
+  width: 100%;
+  height: auto;
 `;
+
+const Title = styled.div`
+  font-size: 2.4rem;
+  /* font-family: "Montserrat", sans-serif; */
+  font-weight: 800;
+`;
+
+const BodyText = styled.div`
+  font-size: 1.2rem;
+  /* font-family: "Overpass", sans-serif; */
+`;
+
+const CardWrapper = styled.div`
+  /* margin: 0; */
+  padding: 1rem;
+  max-width: 25rem;
+  /* height: 50vh; */
+  height: auto;
+  background-color: #eee;
+  margin-left: 4rem;
+`;
+
+const Card = () => (
+  <CardWrapper>
+    <Title>US - Mexico Border</Title>
+    <Img src="https://thenypost.files.wordpress.com/2019/02/190223-border-wall-prototypes.jpg?quality=90&strip=all&w=618&h=410&crop=1" />
+    <BodyText>
+      The Mexico–United States border (Spanish: frontera México–Estados Unidos)
+      is an international border separating Mexico and the United States,
+      extending from the Pacific Ocean in the west to the Gulf of Mexico in the
+      east. The border traverses a variety of terrains, ranging from urban areas
+      to deserts. The Mexico–United States border is the most frequently crossed
+      border in the world,[1][2][3] with approximately 350 million documented
+      crossings annually.
+    </BodyText>
+  </CardWrapper>
+);
 
 const InfoDiv = props => (
   <InfoDivWrapper>
@@ -86,9 +143,6 @@ const InfoDiv = props => (
     ) : (
       <Img alt="barrier" src={props.data.thumbnail} />
     )}
-    {/* <div>{props.data.thumbnail}</div> */}
-    {/* <Img src="${props.data.border_name == undefined ? "hello": props.data.thumbnail}"/> */}
-    {/* <div>Resources Link</div> */}
     <button>See more</button>
   </InfoDivWrapper>
 );
@@ -154,7 +208,11 @@ class Walls extends Component {
     const { svgDimensions, barrier_data, rectStats } = this.state;
 
     return (
-      <>
+      <WallPageWrapper>
+        {/* <div>
+          <button>Square</button>
+          <button>Wall</button>
+        </div> */}
         <Svg
           viewBox={"0 0 " + svgDimensions.width + " " + svgDimensions.height}
         >
@@ -178,9 +236,9 @@ class Walls extends Component {
           </g>
           <g />
         </Svg>
-        {}
-        <InfoDiv data={this.state.toolTipData} />
-      </>
+        <Card />
+        {/* <InfoDiv data={this.state.toolTipData} /> */}
+      </WallPageWrapper>
     );
   }
 }

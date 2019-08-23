@@ -1,4 +1,12 @@
-.App {
+/* .App {
   font-family: sans-serif;
   text-align: center;
+} */
+
+html,
+body {
+  padding: 0;
+  margin: 0;
 }
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:800|Overpass&display=swap");
