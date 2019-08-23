@@ -8,7 +8,8 @@ import { feature } from "topojson-client";
 import _ from "lodash";
 import * as dg from "dis-gui";
 
-import barrier_data from "../barrier_data.json";
+// import barrier_data from "../barrier_data.json";
+import barrier_data from "../barrier_data_updated.json";
 
 ////////////////////////////////////////////////////////////////
 // Bugs:
@@ -142,23 +143,36 @@ const CityCirlces = props => (
 
 const MarkerGroup = props => (
   <>
-    {/* <g>
-      {props.data.map((barrier, i) =>
-        // console.log(props.data)
-        <circle
-        // key={`marker-${props.index.i}`}
-        cx={mapProjection()(props.data.coordinates)[0]}
-        cy={mapProjection()(props.data.coordinates)[1]}
-        r={props.data.population / 3000000}
-        fill="#E91E63"
-        stroke="#FFFFFF"
-        className="marker"
-        onClick={() => this.handleMarkerClick(i)}
-        data-rh="Top"
-      />
+    <g>
+      {props.data.map(
+        (barrier, i) => (
+          // console.log(barrier)
+          <circle
+            // key={`marker-${props.index.i}`}
+            cx={
+              mapProjection()([
+                barrier.coordinates.lat,
+                barrier.coordinates.long
+              ])[0]
+            }
+            cy={
+              mapProjection()([
+                barrier.coordinates.lat,
+                barrier.coordinates.long
+              ])[1]
+            }
+            // r={props.data.population / 3000000}
+            r={5}
+            fill="#E91E63"
+            stroke="#FFFFFF"
+            className="marker"
+            onClick={() => this.handleMarkerClick(i)}
+            data-rh="Top"
+          />
+        )
         // <BarrierCircle data={barrier.coordinates} index={i} />
       )}
-    </g> */}
+    </g>
     {/* <g>
       {props.cities.map((city, i) => (
         <CityCirlces key={`marker-${i}`} data={city} index={i} />
