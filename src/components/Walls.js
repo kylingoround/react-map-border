@@ -17,18 +17,79 @@ const Svg = styled.svg`
 
 const InfoDivWrapper = styled.div``;
 
+const Img = styled.img`
+  max-width: 200px;
+`;
+
 const InfoDiv = props => (
   <InfoDivWrapper>
-    {console.log(props.data)}
-    <div>display information</div>
-    <div>Border Name</div>
-    <div>Built Status</div>
-    <div>Length: xxx km</div>
-    <div>Description and stuff</div>
-    <div>Country A: xxx</div>
-    <div>Country B: xxx</div>
-    <div>Thumbnail Image</div>
-    <div>Resources Link</div>
+    {console.log(props.data.border_name)}
+    <div>Barrier Tooltip Information</div>
+    <div>
+      Border Name:{" "}
+      {props.data.border_name === undefined ? (
+        <>Not Selected</>
+      ) : (
+        <>{props.data.border_name}</>
+      )}
+    </div>
+    <div>
+      Built Status:{" "}
+      {props.data.border_name === undefined ? (
+        <>Not Selected</>
+      ) : (
+        <>{props.data.built_status}</>
+      )}
+    </div>
+    <div>
+      Length: xxx km{" "}
+      {props.data.border_name === undefined ? (
+        <>Not Selected</>
+      ) : (
+        <>{props.data.length}</>
+      )}
+    </div>
+    <div>
+      Description:{" "}
+      {props.data.border_name === undefined ? (
+        <>Not Selected</>
+      ) : (
+        <>{props.data.description}</>
+      )}
+    </div>
+    <div>
+      Country A:{" "}
+      {props.data.border_name === undefined ? (
+        <>Not Selected</>
+      ) : (
+        <>{props.data.entity_1}</>
+      )}
+    </div>
+    <div>
+      Country B:{" "}
+      {props.data.border_name === undefined ? (
+        <>Not Selected</>
+      ) : (
+        <>{props.data.entity_2}</>
+      )}
+    </div>
+    {props.data.thumbnail === undefined ? (
+      <Img
+        alt="placeholder"
+        src="https://thenypost.files.wordpress.com/2019/02/190223-border-wall-prototypes.jpg?quality=90&strip=all&w=618&h=410&crop=1"
+      />
+    ) : props.data.thumbnail === "" ? (
+      <Img
+        alt="placeholder"
+        src="https://thenypost.files.wordpress.com/2019/02/190223-border-wall-prototypes.jpg?quality=90&strip=all&w=618&h=410&crop=1"
+      />
+    ) : (
+      <Img alt="barrier" src={props.data.thumbnail} />
+    )}
+    {/* <div>{props.data.thumbnail}</div> */}
+    {/* <Img src="${props.data.border_name == undefined ? "hello": props.data.thumbnail}"/> */}
+    {/* <div>Resources Link</div> */}
+    <button>See more</button>
   </InfoDivWrapper>
 );
 
@@ -125,12 +186,3 @@ class Walls extends Component {
 }
 
 export default Walls;
-
-// {this.state.arr.map((el, i) =>
-//       <rect
-//         key={i}
-//         x={i*50 + 20}
-//         y={30}
-//         width='50'
-//         height='50'
-//       />)}

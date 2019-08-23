@@ -2,7 +2,7 @@
   {
     "border_id": "US-Mexico",
     "border_name": "U.S. - Mexico Border",
-    "built-status": [
+    "built_status": [
       "Proposed",
       "agreed",
       "Planned",
@@ -33,7 +33,7 @@
   {
     "border_id": "Belize–Guatemala",
     "border_name": "Belize–Guatemala",
-    "built-status": ["proposed", "agreed"],
+    "built_status": ["proposed", "agreed"],
     "built-year": "N/A",
     "coordinates": {
       "raw": "17.1820337999° N, 89.304135° W",
@@ -50,7 +50,7 @@
   {
     "border_id": "Botswana/Zimbabwe",
     "border_name": "Botswana/Zimbabwe",
-    "built-status": ["built"],
+    "built_status": ["built"],
     "built-year": 2003,
     "coordinates": {
       "raw": "20.483349°S, 27.275201°E",
@@ -74,7 +74,7 @@
   {
     "border_id": "Brunei/Limbang",
     "border_name": "Brunei/Limbang",
-    "built-status": ["built"],
+    "built_status": ["built"],
     "built-year": "2005",
     "coordinates": {
       "raw": "4.742728^N 115.021246^E",
@@ -93,7 +93,7 @@
   {
     "border_id": "Bulgaria/Turkey",
     "border_name": "Bulgaria/Turkey",
-    "built-status": ["built"],
+    "built_status": ["built"],
     "built-year": "2014",
     "coordinates": {
       "raw": "41.787063^N, 26.362293^E",
@@ -112,7 +112,7 @@
   {
     "border_id": "Ceuta border fence",
     "border_name": "",
-    "built-status": ["built"],
+    "built_status": ["built"],
     "built-year": "2001",
     "coordinates": {
       "raw": "35.893080^N 5.322301^W",
@@ -139,7 +139,7 @@
   {
     "border_id": "China/Hong Kong",
     "border_name": "The Frontier Closed Area",
-    "built-status": ["built"],
+    "built_status": ["built"],
     "built-year": "1960",
     "coordinates": {
       "raw": "22.517283^N 114.069006^E",
@@ -158,7 +158,7 @@
   {
     "border_id": "Costa Rica/Nicaragua",
     "border_name": "",
-    "built-status": ["Proposed"],
+    "built_status": ["Proposed"],
     "built-year": "N/A",
     "coordinates": {
       "raw": "11.026543^N 84.308597^W",
@@ -180,7 +180,7 @@
     "border_id": "Chinese–Korean-border-fence",
     "visibility": false,
     "border_name": "Chinese–Korean border fence",
-    "built-status": ["Under construction"],
+    "built_status": ["Under construction"],
     "built-year": "N/A",
     "coordinates": {
       "raw": "40.877177^N, 125.941587^E",
@@ -201,7 +201,7 @@
   {
     "border_id": "Egypt–Gaza barrier",
     "border_name": "Egypt–Gaza barrier",
-    "built-status": ["under construction"],
+    "built_status": ["under construction"],
     "built-year": "N/A",
     "coordinates": {
       "raw": "30.056295^N, 31.191607^E",
@@ -220,7 +220,7 @@
   {
     "border_id": "Estonia–Russia border fence",
     "border_name": "Estonia–Russia border fence",
-    "built-status": ["planned"],
+    "built_status": ["planned"],
     "built-year": "N/A",
     "coordinates": {
       "raw": "59.035331^N,27.763282^E",
@@ -243,7 +243,7 @@
   {
     "border_id": "North Macedonia–Greece barrier",
     "border_name": "Macedonian border barrier",
-    "built-status": ["built"],
+    "built_status": ["built"],
     "built-year": "2015",
     "coordinates": {
       "raw": "41.126211^N,22.507305^E",
@@ -262,7 +262,7 @@
   {
     "border_id": "Malaysia–Thailand border",
     "border_name": "Malaysia–Thailand border",
-    "built-status": ["Proposed"],
+    "built_status": ["Proposed"],
     "built-year": "N/A",
     "coordinates": {
       "raw": "5.725702^N, 101.070998^E",
@@ -281,7 +281,7 @@
   {
     "border_id": "Melilla border fence",
     "border_name": "Melilla border fence",
-    "built-status": ["built"],
+    "built_status": ["built"],
     "built-year": "1998",
     "coordinates": {
       "raw": "35.288694^N,2.968216^W",
@@ -302,7 +302,7 @@
   {
     "border_id": "Hungary–Serbia barrier",
     "border_name": "Hungary–Serbia barrier",
-    "built-status": ["built"],
+    "built_status": ["built"],
     "built-year": "2015",
     "coordinates": {
       "raw": "46.177657^N,19.574925^E",
@@ -321,7 +321,7 @@
   {
     "border_id": "Hungary–Croatia barrier",
     "border_name": "Hungary–Croatia barrier",
-    "built-status": ["built"],
+    "built_status": ["built"],
     "built-year": "2015",
     "coordinates": {
       "raw": "46.064891^N,17.244936^E",
@@ -340,7 +340,7 @@
   {
     "border_id": "India–Myanmar barrier",
     "border_name": "India–Myanmar barrier",
-    "built-status": ["Under Construction"],
+    "built_status": ["Under Construction"],
     "built-year": "N/A",
     "coordinates": {
       "raw": "24.200245^N,94.282182^E",
@@ -359,7 +359,7 @@
   {
     "border_id": "Indian Kashmir barrier",
     "border_name": "Line of Control",
-    "built-status": ["built"],
+    "built_status": ["built"],
     "built-year": "2004",
     "coordinates": {
       "raw": "34.631751^N,76.039281^E",
@@ -378,7 +378,7 @@
   {
     "border_id": "Iran–Pakistan barrier",
     "border_name": "Iran–Pakistan border",
-    "built-status": ["Under Construction"],
+    "built_status": ["Under Construction"],
     "built-year": "N/A",
     "coordinates": {
       "raw": "28.341536^N,62.504159^E",
@@ -397,7 +397,7 @@
   {
     "border_id": "Kazakhstan–Uzbekistan barrier",
     "border_name": "Kazakhstan–Uzbekistan barrier",
-    "built-status": ["built"],
+    "built_status": ["built"],
     "built-year": "2006",
     "coordinates": {
       "raw": "41.441329^N,69.174877^E",
@@ -416,7 +416,7 @@
   {
     "border_id": "Korean Demilitarized Zone",
     "border_name": "Korean Demilitarized Zone",
-    "built-status": ["built"],
+    "built_status": ["built"],
     "built-year": "1953",
     "coordinates": {
       "raw": "37.953643^N, 126.669807^E",
@@ -435,7 +435,7 @@
   {
     "border_id": "Kruger National Park",
     "border_name": "",
-    "built-status": [],
+    "built_status": [],
     "built-year": "N/A",
     "coordinates": {
       "raw": "",
@@ -454,7 +454,7 @@
   {
     "border_id": "South Africa/Zimbabwe Border",
     "border_name": "",
-    "built-status": [],
+    "built_status": [],
     "built-year": "N/A",
     "coordinates": {
       "raw": "",
@@ -473,7 +473,7 @@
   {
     "border_id": "Kuwait–Iraq barrier",
     "border_name": "Iraq–Kuwait barrier",
-    "built-status": ["built"],
+    "built_status": ["built"],
     "built-year": "1991",
     "coordinates": {
       "raw": "30.103670^N,47.707759^E",
@@ -492,7 +492,7 @@
   {
     "border_id": "Pakistan–Afghanistan barrier",
     "border_name": "Pakistan–Afghanistan barrier",
-    "built-status": ["Under Construction"],
+    "built_status": ["Under Construction"],
     "built-year": "N/A",
     "coordinates": {
       "raw": "31.183495^N,66.978497^E",
@@ -515,7 +515,7 @@
   {
     "border_id": "Saudi–Yemen barrier",
     "border_name": "Saudi-Yemen barrier",
-    "built-status": ["built"],
+    "built_status": ["built"],
     "built-year": "2004",
     "coordinates": {
       "raw": "17.433414^N, 44.718835^E",
@@ -534,7 +534,7 @@
   {
     "border_id": "Saudi–Iraq barrier",
     "border_name": "Saudi–Iraq barrier",
-    "built-status": ["built"],
+    "built_status": ["built"],
     "built-year": "2014",
     "coordinates": {
       "raw": "30.738592^N,42.614394^E",
@@ -553,7 +553,7 @@
   {
     "border_id": "Slovenia–Croatia barrier",
     "border_name": "Slovenia–Croatia barrier",
-    "built-status": ["built"],
+    "built_status": ["built"],
     "built-year": "2016",
     "coordinates": {
       "raw": "45.642033^N,15.372818^E",
@@ -572,7 +572,7 @@
   {
     "border_id": "Turkey–Syria border barrier",
     "border_name": "Turkey–Syria border barrier",
-    "built-status": ["Under Construction"],
+    "built_status": ["Under Construction"],
     "built-year": "N/A",
     "coordinates": {
       "raw": "36.870718^N,38.468054^E",
@@ -591,7 +591,7 @@
   {
     "border_id": "Turkey–Iran border barrier",
     "border_name": "Turkey–Iran border barrier",
-    "built-status": ["Under Construction"],
+    "built_status": ["Under Construction"],
     "built-year": "N/A",
     "coordinates": {
       "raw": "38.892210^N,44.223745^E",
@@ -610,7 +610,7 @@
   {
     "border_id": "Turkmen–Uzbekistan barrier",
     "border_name": "Turkmen–Uzbekistan barrier",
-    "built-status": ["Built"],
+    "built_status": ["Built"],
     "built-year": "2001",
     "coordinates": {
       "raw": "41.287498^N,61.421166^E",
@@ -629,7 +629,7 @@
   {
     "border_id": "Ukraine–Russia barrier",
     "border_name": "Russia–Ukraine barrier",
-    "built-status": ["Under Construction"],
+    "built_status": ["Under Construction"],
     "built-year": "N/A",
     "coordinates": {
       "raw": "52.362579^N,33.762582^E",
@@ -648,7 +648,7 @@
   {
     "border_id": "United Arab Emirates–Oman barrier",
     "border_name": "United Arab Emirates–Oman barrier",
-    "built-status": ["Under Construction"],
+    "built_status": ["Under Construction"],
     "built-year": "N/A",
     "coordinates": {
       "raw": "23.848235^N,55.534049^E",
@@ -671,7 +671,7 @@
   {
     "border_id": "Mexico–United States barrier",
     "border_name": "Mexico–United States barrier",
-    "built-status": ["Partially Constructed"],
+    "built_status": ["Partially Constructed"],
     "built-year": "N/A",
     "coordinates": {
       "raw": "31.748966^N,106.490558^W",
@@ -690,7 +690,7 @@
   {
     "border_id": "Uzbek–Afghanistan barrier",
     "border_name": "Afghanistan–Uzbekistan barrier",
-    "built-status": ["Built"],
+    "built_status": ["Built"],
     "built-year": "2001",
     "coordinates": {
       "raw": "37.199232^N,67.320657^E",
@@ -709,7 +709,7 @@
   {
     "border_id": "Uzbek–Kyrgyzstan barrier",
     "border_name": "Uzbek–Kyrgyzstan barrier",
-    "built-status": ["built"],
+    "built_status": ["built"],
     "built-year": "1999",
     "coordinates": {
       "raw": "41.090774^N,72.192506^E",
@@ -728,7 +728,7 @@
   {
     "border_id": "Israel-West Bank barrier",
     "border_name": "Israeli West Bank barrier",
-    "built-status": ["Partially Constructed"],
+    "built_status": ["Partially Constructed"],
     "built-year": "N/A",
     "coordinates": {
       "raw": "31.949033^N,35.002741^E",
@@ -747,7 +747,7 @@
   {
     "border_id": "Israel-Egypt barrier",
     "border_name": "Israel-Egypt barrier",
-    "built-status": ["Built"],
+    "built_status": ["Built"],
     "built-year": "2013",
     "coordinates": {
       "raw": "30.726208^N,34.472723^E",
@@ -766,7 +766,7 @@
   {
     "border_id": "Israel-Lebanon barrier",
     "border_name": "Israel-Lebanon barrier",
-    "built-status": ["built"],
+    "built_status": ["built"],
     "built-year": "2018",
     "coordinates": {
       "raw": "33.059476^N,35.348483^E",
@@ -785,7 +785,7 @@
   {
     "border_id": "Israel-Gaza barrier",
     "border_name": "Israel-Gaza barrier",
-    "built-status": [],
+    "built_status": [],
     "built-year": "N/A",
     "coordinates": {
       "raw": "31.382705^N,34.376250^E",
