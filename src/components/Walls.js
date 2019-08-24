@@ -4,12 +4,20 @@ import styled from "styled-components";
 import barrier_data from "../data/barrier_data_updated.json";
 
 // todos
-// drag
+// drag map / svg, infinite scrolling (horizental)
 // transition
 // add map
+// sort the data by ???
 
-// title: Montserrat 800
-// body: overpass
+// close and open div
+// map
+// another wall
+
+// detail page
+
+// complete dataset
+
+// optimize window open / close behavior
 
 const Svg = styled.svg`
   width: 100%;
@@ -21,52 +29,107 @@ const Svg = styled.svg`
   right: 0;
   /* background-color: teal; */
   position: fixed;
-  z-index: -1;
+  /* z-index: -1; */
+  z-index: 0;
 `;
 
 const WallPageWrapper = styled.div`
+  pointer-events: none;
   width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  /* background: teal; */
+  z-index: 2;
 `;
 
 const InfoDivWrapper = styled.div``;
 
 const Img = styled.img`
   /* max-width: 300px; */
-  padding-top: 0.7rem;
+  /* margin-top: 1rem; */
+  margin-bottom: 1rem;
   width: 100%;
   height: auto;
+  outline: 3px solid black;
 `;
 
 const Title = styled.div`
   font-size: 2.4rem;
-  /* font-family: "Montserrat", sans-serif; */
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  padding-bottom: 1rem;
+`;
+
+const BigBoldText = styled.div`
+  font-size: 1rem;
+  font-family: "Overpass", "Roboto", sans-serif;
   font-weight: 800;
 `;
 
 const BodyText = styled.div`
-  font-size: 1.2rem;
-  /* font-family: "Overpass", sans-serif; */
+  font-size: 1rem;
+  font-family: "Overpass", "Roboto", sans-serif;
+  font-weight: 300;
+  /* font-family: "Montserrat", sans-serif; */
 `;
 
 const CardWrapper = styled.div`
   /* margin: 0; */
   padding: 1rem;
-  max-width: 25rem;
+  max-width: 27rem;
   /* height: 50vh; */
   height: auto;
   background-color: #eee;
-  margin-left: 4rem;
+  margin-left: 5rem;
+  outline: 3px solid black;
+  z-index: 2;
+  pointer-events: auto;
 `;
 
-const Card = () => (
+const RectClickable = styled.rect`
+  pointer-events: auto;
+`;
+
+function checkNull(data, customPlaceholder) {
+  if (data === null || data === undefined) {
+    if (customPlaceholder === undefined) {
+      return "data is not defined or null";
+    } else {
+      return customPlaceholder;
+    }
+  } else {
+    return data;
+  }
+}
+
+const Card = props => (
   <CardWrapper>
-    <Title>US - Mexico Border</Title>
-    <Img src="https://thenypost.files.wordpress.com/2019/02/190223-border-wall-prototypes.jpg?quality=90&strip=all&w=618&h=410&crop=1" />
+    <Img
+      src={checkNull(
+        props.thumbnail,
+        "https://thenypost.files.wordpress.com/2019/02/190223-border-wall-prototypes.jpg?quality=90&strip=all&w=618&h=410&crop=1"
+      )}
+    />
+    {/* <Title>US - Mexico Border</Title> */}
+    <Title>{checkNull(props.border_name)}</Title>
+    {/* <BodyText>Status: Built</BodyText> */}
+    <BodyText>Status: {checkNull(props.built_status)}</BodyText>
+    {/* <BodyText>Length: 275 km</BodyText> */}
+    <BodyText>Length: {checkNull(props.length)} km</BodyText>
+    {/* <BodyText>Country(s): US, Mexico</BodyText> */}
     <BodyText>
+      Country(s): {checkNull(props.entity_1)}, {checkNull(props.entity_2)}
+    </BodyText>
+    {/* <Img src="https://thenypost.files.wordpress.com/2019/02/190223-border-wall-prototypes.jpg?quality=90&strip=all&w=618&h=410&crop=1" /> */}
+    {/* <Img
+      src={checkNull(
+        props.thumbnail,
+        "https://thenypost.files.wordpress.com/2019/02/190223-border-wall-prototypes.jpg?quality=90&strip=all&w=618&h=410&crop=1"
+      )} 
+    />*/}
+    {/* <BodyText>
       The Mexico–United States border (Spanish: frontera México–Estados Unidos)
       is an international border separating Mexico and the United States,
       extending from the Pacific Ocean in the west to the Gulf of Mexico in the
@@ -74,7 +137,10 @@ const Card = () => (
       to deserts. The Mexico–United States border is the most frequently crossed
       border in the world,[1][2][3] with approximately 350 million documented
       crossings annually.
-    </BodyText>
+    </BodyText> */}
+    <BodyText>{checkNull(props.description)}</BodyText>
+    <button onClick={props.handleTooltipClose}>CLOSE ME</button>
+    <button>SEE MORE</button>
   </CardWrapper>
 );
 
@@ -176,7 +242,7 @@ class Walls extends Component {
       gap: 5,
       offset: 0
     },
-    displayToolTip: false,
+    isDisplayingToolTip: false,
     toolTipData: "placeholder"
   };
   componentDidMount() {
@@ -186,7 +252,10 @@ class Walls extends Component {
   }
 
   handleRectClick = data => {
-    console.log(data);
+    this.setState(prevState => ({
+      isDisplayingToolTip: !prevState.isDisplayingToolTip
+    }));
+
     this.setState({ toolTipData: data });
   };
 
@@ -204,15 +273,27 @@ class Walls extends Component {
     this.setState({ rectStats: prevState }, () => console.log(this.state));
   }
 
+  toggleTooltip() {
+    this.setState(prevState => ({
+      isDisplayingToolTip: !prevState.isDisplayingToolTip
+    }));
+  }
+
   render() {
     const { svgDimensions, barrier_data, rectStats } = this.state;
 
     return (
-      <WallPageWrapper>
-        {/* <div>
-          <button>Square</button>
-          <button>Wall</button>
-        </div> */}
+      <div>
+        <WallPageWrapper>
+          {this.state.isDisplayingToolTip && (
+            <Card
+              {...this.state.toolTipData}
+              handleTooltipClose={() => this.toggleTooltip()}
+            />
+          )}
+          {/* <InfoDiv data={this.state.toolTipData} /> */}
+        </WallPageWrapper>
+
         <Svg
           viewBox={"0 0 " + svgDimensions.width + " " + svgDimensions.height}
         >
@@ -220,13 +301,13 @@ class Walls extends Component {
             {barrier_data &&
               barrier_data.map((data, i) => (
                 // <div>{console.log(data)}</div>
-                <rect
+                <RectClickable
                   x={
                     i * (rectStats.width + rectStats.gap) +
                     10 +
                     rectStats.offset
                   }
-                  y={svgDimensions.width / 2}
+                  y={svgDimensions.height / 2}
                   width={rectStats.width}
                   height={rectStats.height}
                   fill="purple"
@@ -236,9 +317,7 @@ class Walls extends Component {
           </g>
           <g />
         </Svg>
-        <Card />
-        {/* <InfoDiv data={this.state.toolTipData} /> */}
-      </WallPageWrapper>
+      </div>
     );
   }
 }

@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import styled from "styled-components";
 
-import Walls from "./components/Walls";
 import "./styles.css";
+
+import styled from "styled-components";
+import Walls from "./components/Walls";
 
 const App = () => (
   <div>
