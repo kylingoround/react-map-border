@@ -20,6 +20,8 @@ import barrier_data from "../data/barrier_data_updated.json";
 // optimize window open / close behavior
 
 const Svg = styled.svg`
+  pointer-events: none;
+
   width: 100%;
   height: 100%;
   position: fixed;
@@ -30,18 +32,19 @@ const Svg = styled.svg`
   /* background-color: teal; */
   position: fixed;
   /* z-index: -1; */
-  z-index: 0;
+  z-index: 1;
 `;
 
 const WallPageWrapper = styled.div`
   pointer-events: none;
   width: 100vw;
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   /* background: teal; */
   z-index: 2;
+  position: fixed;
 `;
 
 const InfoDivWrapper = styled.div``;
@@ -283,7 +286,7 @@ class Walls extends Component {
     const { svgDimensions, barrier_data, rectStats } = this.state;
 
     return (
-      <div>
+      <>
         <WallPageWrapper>
           {this.state.isDisplayingToolTip && (
             <Card
@@ -293,7 +296,6 @@ class Walls extends Component {
           )}
           {/* <InfoDiv data={this.state.toolTipData} /> */}
         </WallPageWrapper>
-
         <Svg
           viewBox={"0 0 " + svgDimensions.width + " " + svgDimensions.height}
         >
@@ -317,7 +319,7 @@ class Walls extends Component {
           </g>
           <g />
         </Svg>
-      </div>
+      </>
     );
   }
 }
