@@ -27,6 +27,10 @@ const PageParent = styled.div`
   align-items: center;
 `;
 
+const WidgetImg = styled.img`
+  width: 100%;
+`;
+
 const WidgetWrapper = styled.div`
   box-sizing: border-box;
   padding: 2px;
@@ -40,20 +44,21 @@ const WidgetWrapper = styled.div`
 `;
 
 const ScrollableContainer = styled.div`
+  overflow-x: hidden;
   overflow-y: auto;
   margin-top: 2vh;
   margin-bottom: 2vh;
-  max-height: 76vh;
+  max-height: 42.7rem;
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
   align-items: center;
 `;
 const BigHead = styled.div`
-  padding-top: 2rem;
-  width: 300px;
-  height: 700px;
-  background-color: teal;
+  margin-top: 2rem;
+  width: 500px;
+  /* height: 700px; */
+  /* background-color: teal; */
 `;
 
 const ContentTextWrapper = styled.div`
@@ -77,6 +82,11 @@ const ContentTextBody = styled.div`
   font-weight: 300;
   font-family: "Overpass", "Roboto", sans-serif;
   color: #dadada;
+`;
+
+const BoldSpan = styled.span`
+  font-weight: 900;
+  font-family: "Overpass", "Roboto", sans-serif;
 `;
 
 const StyledSVG = styled.svg`
@@ -169,7 +179,8 @@ const RectGroup = props => {
     migrantStockChange,
     migrantStockTotal,
     isUp,
-    updateTooltipData
+    updateTooltipData,
+    handleOpenWidget
   } = props;
 
   const smallRectGap = 10;
@@ -181,7 +192,7 @@ const RectGroup = props => {
       {/* <>{console.log(migrantStockChange)}</> */}
       {/* <>{console.log(migrantStockChange.find(x => x.destination === "China"))}</> */}
       {barrierData.map((d, i) => (
-        <g key={i}>
+        <g key={i} onClick={() => handleOpenWidget(d)}>
           {migrantStockChange.find(x => x.destination === d.entity_1) && (
             <RectwithStateData
               isUp={true}
@@ -244,7 +255,10 @@ const RectWall = class RectWall extends Component {
     },
     rectHoverTooltipData: [],
     isDisplayingHoverTip: false,
-    tooltipData: { name: "Jack", profession: "ripper" }
+    tooltipData: { name: "Jack", profession: "ripper" },
+    isDisplayingWidget: false,
+    widgetDisplayData: {},
+    isDisplayingWelcome: false
   };
 
   calculateGap(data) {
@@ -278,6 +292,15 @@ const RectWall = class RectWall extends Component {
     this.state.loadingFinished && this.setState({ tooltipData: data });
   };
 
+  handleCloseWidget = () => {
+    this.setState({ isDisplayingWidget: false });
+  };
+
+  handleOpenWidget = data => {
+    data && this.setState({ widgetDisplayData: data });
+    this.setState({ isDisplayingWidget: true });
+  };
+
   componentDidMount() {
     // migrant stock change rate
 
@@ -306,7 +329,21 @@ const RectWall = class RectWall extends Component {
       .then(() => console.log(this.state));
   }
   render() {
-    const { svgDimensions, loadingFinished } = this.state;
+    const {
+      svgDimensions,
+      loadingFinished,
+      isDisplayingWidget,
+      widgetDisplayData
+    } = this.state;
+    const rectPrimeStats = {
+      width: 250,
+      height: 250
+    };
+    const visualSvgBoxStats = {
+      width: 2500,
+      height: 700
+    };
+    const mockupData = [1, 2, 3, 4, 5, 6, 7, 8, 9];
     return (
       <>
         <StyledSVG
@@ -314,7 +351,6 @@ const RectWall = class RectWall extends Component {
           ref={ref => (this.fooRef = ref)}
           data-tip="tooltip"
         >
-          >
           {loadingFinished && (
             <RectGroup
               barrierData={this.state.barrierData}
@@ -323,9 +359,7 @@ const RectWall = class RectWall extends Component {
               migrantStockChange={this.state.migrantStockChange}
               migrantStockTotal={this.migrantStockTotal}
               updateTooltipData={this.updateTooltipData} // give it to first children
-              onMouseOver={() => {
-                ReactTooltip.hide(this.fooRef);
-              }}
+              handleOpenWidget={this.handleOpenWidget}
             />
           )}
         </StyledSVG>
@@ -333,7 +367,6 @@ const RectWall = class RectWall extends Component {
           <div>what is this?</div>
         </p> */}
         <ReactTooltip>
-          {/* <div>{this.state.tooltipData.name}</div> */}
           {this.state.tooltipData && (
             <div>
               <div>Border Name: {this.state.tooltipData.border_name}</div>
@@ -346,83 +379,154 @@ const RectWall = class RectWall extends Component {
           )}
         </ReactTooltip>
         <PageParent>
-          <WidgetWrapper>
-            <ScrollableContainer>
-              <BigHead>
-                <svg viewBox={"0 0 800 500"}>
-                  {/* <g>data group: top group / down group</g> */}
-                  <g>{/* middle expandable group */}</g>
-                  <g>{/* <rect>customizable group</rect> */}</g>
-                </svg>
-              </BigHead>
+          {isDisplayingWidget && (
+            <WidgetWrapper>
+              <button onClick={this.handleCloseWidget}>close</button>
+              <ScrollableContainer>
+                <BigHead>
+                  <svg
+                    viewBox={
+                      "0 0 " +
+                      visualSvgBoxStats.width +
+                      " " +
+                      visualSvgBoxStats.height
+                    }
+                  >
+                    <def>
+                      <g id="rectPrime">
+                        <rect
+                          width={rectPrimeStats.width - 2}
+                          height={rectPrimeStats.height}
+                          x={0}
+                          y={0}
+                          fill={"#F62919"}
+                        />
+                        {[1, 2, 3, 4, 5, 6, 7, 8].map((d, i) => (
+                          <rect
+                            width={rectPrimeStats.width / 17}
+                            height={rectPrimeStats.height * 0.8}
+                            x={
+                              (rectPrimeStats.width / 17) * i * 2 +
+                              rectPrimeStats.width / 17
+                            }
+                            y={rectPrimeStats.height * 0.1}
+                            fill={"#1A1A1A"}
+                          />
+                        ))}
+                        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((d, i) => (
+                          <circle
+                            cx={
+                              (i * rectPrimeStats.width) / 6 / 2 +
+                              rectPrimeStats.width / 12
+                            }
+                            cy={0}
+                            r={rectPrimeStats.width / 12}
+                            fill={"none"}
+                            stroke={"#F62919"}
+                            stroke-width="4"
+                          />
+                        ))}
 
-              <ContentTextWrapper>
-                <ContentTextTitle>US-Mexico Barrier</ContentTextTitle>
-                <ContentTextBody>
-                  <div>
-                    Moby-Dick; or, The Whale is an 1851 novel by American writer
-                    Herman Melville. The book is sailor Ishmael's narrative of
-                    the obsessive quest of Ahab, captain of the whaling ship
-                    Pequod, for revenge on Moby Dick, the giant white sperm
-                    whale that on the ship's previous voyage bit off Ahab's leg
-                    at the knee. A contribution to the literature of the
-                    American Renaissance, the work's genre classifications range
-                    from late Romantic to early Symbolist. Moby-Dick was
-                    published to mixed reviews, was a commercial failure, and
-                    was out of print at the time of the author's death in 1891.
-                    Its reputation as a "Great American Novel" was established
-                    only in the 20th century, after the centennial of its
-                    author's birth. William Faulkner confessed he wished he had
-                    written the book himself,[1] and D. H. Lawrence called it
-                    "one of the strangest and most wonderful books in the world"
-                    and "the greatest book of the sea ever written".[2] Its
-                    opening sentence, "Call me Ishmael", is among world
-                    literature's most famous.[3]
-                  </div>
-                  <div>
-                    Melville began writing Moby-Dick in February 1850, and would
-                    eventually take 18 months to write the book, a full year
-                    more than he had first anticipated. Writing was interrupted
-                    by his making the acquaintance of Nathaniel Hawthorne in
-                    August 1850, and by the creation of the "Mosses from an Old
-                    Manse" essay as a first result of that friendship. The book
-                    is dedicated to Hawthorne, "in token of my admiration for
-                    his genius".
-                  </div>
-                  <div>
-                    The basis for the work is Melville's 1841 whaling voyage
-                    aboard the Acushnet. The novel also draws on whaling
-                    literature, and on literary inspirations such as Shakespeare
-                    and the Bible. The white whale is modeled on the notoriously
-                    hard-to-catch albino whale Mocha Dick, and the book's ending
-                    is based on the sinking of the whaleship Essex in 1820. The
-                    detailed and realistic descriptions of whale hunting and of
-                    extracting whale oil, as well as life aboard ship among a
-                    culturally diverse crew, are mixed with exploration of class
-                    and social status, good and evil, and the existence of God.
-                    In addition to narrative prose, Melville uses styles and
-                    literary devices ranging from songs, poetry, and catalogs to
-                    Shakespearean stage directions, soliloquies, and asides.
-                  </div>
-                  <div>
-                    The basis for the work is Melville's 1841 whaling voyage
-                    aboard the Acushnet. The novel also draws on whaling
-                    literature, and on literary inspirations such as Shakespeare
-                    and the Bible. The white whale is modeled on the notoriously
-                    hard-to-catch albino whale Mocha Dick, and the book's ending
-                    is based on the sinking of the whaleship Essex in 1820. The
-                    detailed and realistic descriptions of whale hunting and of
-                    extracting whale oil, as well as life aboard ship among a
-                    culturally diverse crew, are mixed with exploration of class
-                    and social status, good and evil, and the existence of God.
-                    In addition to narrative prose, Melville uses styles and
-                    literary devices ranging from songs, poetry, and catalogs to
-                    Shakespearean stage directions, soliloquies, and asides.
-                  </div>
-                </ContentTextBody>
-              </ContentTextWrapper>
-            </ScrollableContainer>
-          </WidgetWrapper>
+                        {/* <rect
+                          width={rectPrimeStats.width / 17}
+                          height={rectPrimeStats.height * 0.8}
+                          x={0}
+                          y={0}
+                          fill={"black"}
+                        /> */}
+                      </g>
+                    </def>
+                    {mockupData.map((d, i) => (
+                      <use
+                        xlinkHref="#rectPrime"
+                        x={
+                          i * rectPrimeStats.width +
+                          (visualSvgBoxStats.width -
+                            rectPrimeStats.width * mockupData.length) /
+                            2
+                        }
+                        y={
+                          (visualSvgBoxStats.height - rectPrimeStats.height) / 2
+                        }
+                      />
+                    ))}
+                    {/* <use xlinkHref="#rectPrime" x={10} y={10} /> */}
+
+                    {/* <g>data group: top group / down group</g> */}
+                    <g>{/* middle expandable group */}</g>
+                    <g>{/* <rect>customizable group</rect> */}</g>
+                  </svg>
+                </BigHead>
+
+                <ContentTextWrapper>
+                  {/* <ContentTextTitle>US-Mexico Barrier</ContentTextTitle> */}
+                  {widgetDisplayData.border_name && (
+                    <ContentTextTitle>
+                      {widgetDisplayData.border_name}
+                    </ContentTextTitle>
+                  )}
+                  <ContentTextBody>
+                    {widgetDisplayData.built_status && (
+                      <div>
+                        <BoldSpan> Status:</BoldSpan>{" "}
+                        {widgetDisplayData.built_status}
+                      </div>
+                    )}
+                    {widgetDisplayData["built-year"] && (
+                      <div>
+                        <BoldSpan>Built Year:</BoldSpan>{" "}
+                        {widgetDisplayData["built-year"]}
+                      </div>
+                    )}
+
+                    {widgetDisplayData.length && (
+                      <div>
+                        <BoldSpan>Length:</BoldSpan> {widgetDisplayData.length}{" "}
+                        km
+                      </div>
+                    )}
+
+                    {widgetDisplayData.purpose && (
+                      <div>
+                        <BoldSpan> Purpose:</BoldSpan>{" "}
+                        {widgetDisplayData.purpose}
+                      </div>
+                    )}
+
+                    {/* {widgetDisplayData && <div></div>} */}
+                    {/* {widgetDisplayData && <div></div>} */}
+                    {/* {widgetDisplayData && <div></div>} */}
+                    {/* {widgetDisplayData && <div></div>} */}
+                    {widgetDisplayData.description && (
+                      <div>{widgetDisplayData.description}</div>
+                    )}
+                    {widgetDisplayData.thumbnail && (
+                      <WidgetImg src={widgetDisplayData.thumbnail} />
+                    )}
+
+                    {/* <div></div> */}
+                    {/* border_id: "Saudi–Yemen barrier"
+                      border_name: "Saudi-Yemen barrier"
+                      built-year: "2004"
+                      built_status: ["built"]
+                      coordinates: {raw: "17.433414^N, 44.718835^E", lat: "17.433414", long: "44.718835"}
+                      description: "The Saudi–Yemen barrier is a physical barrier constructed by Saudi Arabia along part of its 1,800-kilometer (1,100 mi) border with Yemen. It is a structure made of pipeline three metres (10 ft) high filled with concrete, acting as a security barrier along sections of the now fully demarcated border with Yemen and fitted with electronic detection equipment."
+                      entity_1: "Saudi Arabia"
+                      entity_1_continent: "Asia"
+                      entity_1_country_code: "SA"
+                      entity_2: "Yemen"
+                      entity_2_continent: "Asia"
+                      entity_2_country_code: "YE"
+                      length: "75"
+                      purpose: ["anti-illegal immigration"]
+                      resources: []
+                      technologies: []
+                      thumbnail: " */}
+                  </ContentTextBody>
+                </ContentTextWrapper>
+              </ScrollableContainer>
+            </WidgetWrapper>
+          )}
         </PageParent>
       </>
     );

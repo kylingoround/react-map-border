@@ -4,13 +4,14 @@ import ReactDOM from "react-dom";
 import "./styles.css";
 
 import styled from "styled-components";
-import Walls from "./components/Walls";
+// import Walls from "./components/Walls";
 import WorldMap from "./components/WorldMap";
+import RectWall from "./components/wall_new";
 
 const App = () => (
   <div>
     {/* <WorldMap className="map" /> */}
-    <Walls className="wall" />
+    <RectWall className="wall" />
   </div>
 );
 
