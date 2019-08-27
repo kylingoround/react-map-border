@@ -11,7 +11,7 @@ import {
 import { Motion, spring } from "react-motion";
 // import csv from "csvtojson";
 // import CsvParse from "@vtex/react-csv-parse";
-import { csv } from "d3";
+import { csv, path } from "d3";
 
 import MapJSON from "../data/world-110m.json";
 
@@ -64,15 +64,23 @@ const StyledSVG = styled.svg`
   z-index: 0;
 `;
 
-const cities = [
-  { name: "Zurich", coordinates: [8.5417, 47.3769] },
-  { name: "Singapore", coordinates: [103.8198, 1.3521] },
-  { name: "San Francisco", coordinates: [-122.4194, 37.7749] },
-  { name: "Sydney", coordinates: [151.2093, -33.8688] },
-  { name: "Lagos", coordinates: [3.3792, 6.5244] },
-  { name: "Buenos Aires", coordinates: [-58.3816, -34.6037] },
-  { name: "Shanghai", coordinates: [121.4737, 31.2304] }
-];
+// const cities = [
+//   { name: "Zurich", coordinates: [8.5417, 47.3769] },
+//   { name: "Singapore", coordinates: [103.8198, 1.3521] },
+//   { name: "San Francisco", coordinates: [-122.4194, 37.7749] },
+//   { name: "Sydney", coordinates: [151.2093, -33.8688] },
+//   { name: "Lagos", coordinates: [3.3792, 6.5244] },
+//   { name: "Buenos Aires", coordinates: [-58.3816, -34.6037] },
+//   { name: "Shanghai", coordinates: [121.4737, 31.2304] }
+// ];
+
+function parseNumArray(numString) {
+  // parse to two numbers
+  let stringArr = numString.split(", ");
+  let numArr = stringArr.map(s => parseFloat(s));
+  // console.log(numArr);
+  return numArr;
+}
 
 class WorldMap extends Component {
   state = {
@@ -149,6 +157,8 @@ class WorldMap extends Component {
     csv(
       "https://gist.githubusercontent.com/kylingoround/2c6d2ea76049be2697193d4f55e53103/raw/b339afce6d49244b9def98d96f82484a73b390fe/missingdata.csv"
     ).then(res => this.setState({ missingData: res }));
+
+    parseNumArray("32.058118300000, -111.623576100000");
   }
 
   render() {
@@ -241,6 +251,33 @@ class WorldMap extends Component {
                       />
                     </Marker>
                   ))}
+                </Markers>
+                <Markers>
+                  {missingData &&
+                    missingData.map(
+                      (d, i) =>
+                        // console.log(d)
+                        // console.log(parseNumArray(d["Location Coordinates"]))
+                        d["Location Coordinates"] && (
+                          <Marker
+                            key={i}
+                            marker={{
+                              coordinates: parseNumArray(
+                                d["Location Coordinates"]
+                              ).reverse()
+                            }}
+                            // onClick={this.handleCityClick}
+                          >
+                            <circle
+                              cx={0}
+                              cy={0}
+                              r={1}
+                              fill="#000"
+                              stroke="#000"
+                            />
+                          </Marker>
+                        )
+                    )}
                 </Markers>
               </ZoomableGroup>
             </StyledComposableMap>

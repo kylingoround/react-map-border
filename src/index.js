@@ -9,7 +9,7 @@ import WorldMap from "./components/WorldMap";
 
 const App = () => (
   <div>
-    <WorldMap className="map" />
+    {/* <WorldMap className="map" /> */}
     <Walls className="wall" />
   </div>
 );

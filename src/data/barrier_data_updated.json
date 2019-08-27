@@ -2,33 +2,58 @@
   {
     "border_id": "US-Mexico",
     "border_name": "U.S. - Mexico Border",
-    "built_status": [
-      "Proposed",
-      "agreed",
-      "Planned",
-      "Built Year",
-      "Under Construction"
-    ],
+    "built_status": ["Built", "Proposed", "Under Construction"],
     "coordinates": {
       "raw": "32°32′4″N 117°7′19″W",
       "lat": "32.5344444",
       "long": "-117.1219444"
     },
-    "length": "",
-    "purpose": "",
-    "description": "This is the U.S.-Mexico Border",
+    "length": "1044",
+    "purpose": ["anti illegal immigration", "anti drug trafficking"],
+    "description": "The Mexico–United States barrier (Spanish: barrera México–Estados Unidos), also known as the border wall, is a series of vertical barriers along the Mexico–United States border intended to reduce illegal immigration to the United States from Mexico.[1] The barrier is not a continuous structure, but a series of obstructions classified as 'fences' or 'walls'.",
     "entity_1": "US",
     "entity_2": "Mexico",
-    "technologies": ["tech1", "tech2"],
-    "economics_data": {
-      "country_1_data": {},
-      "country_2_data": {}
-    },
-    "humanitarian_data": {
-      "country_1_data": {},
-      "country_2_data": {}
-    },
-    "resources": []
+    "technologies": ["camera", "patrol", "steel fences"],
+    "material": ["steel bollard"],
+    "height": "18 - 26 ft",
+    "statistics": [
+      {
+        "content": "97% of border apprehensions (foreign nationals who are caught being in the U.S. illegally) by the Border Patrol in 2010 occurred at the southwest border.",
+        "source": "Wikipedia",
+        "url": "https://www.wikiwand.com/en/Mexico%E2%80%93United_States_barrier"
+      },
+      {
+        "content": "The number of Border Patrol apprehensions declined 61% from 1,189,000 in 2005 to 723,840 in 2008 to 463,000 in 2010.",
+        "source": "Wikipedia",
+        "url": "https://www.wikiwand.com/en/Mexico%E2%80%93United_States_barrier"
+      },
+      {
+        "content": " Border apprehensions in 2010 were at their lowest level since 1972.In December 2016 apprehensions were at 58,478, whereas in March 2017, there were 17,000 apprehensions, which was the fifth month in a row of decline.",
+        "source": "Wikipedia",
+        "url": "https://www.wikiwand.com/en/Mexico%E2%80%93United_States_barrier"
+      }
+    ],
+    "material": ["steel bollard"],
+    "history": [
+      {
+        "year": 1993,
+        "event": "US President George H. W. Bush approved the initial 14 miles of fencing along the San Diego–Tijuana border.",
+        "source_url": "https://www.fox47news.com/news/national/this-is-how-much-of-the-border-wall-has-been-built-so-far"
+      },
+      {
+        "year": 1994,
+        "event": "Further barriers were built from 1994 under the presidency of Bill Clinton as part of three larger operations to taper transportation of illegal drugs manufactured in Latin America and immigration: Operation Gatekeeper in California, Operation Hold-the-Line[11] in Texas, and Operation Safeguard.",
+        "source_url": "http://www.globalsecurity.org/military/ops/gatekeeper.htm"
+      },
+      {
+        "year": 1996,
+        "event": "Clinton signed the Illegal Immigration Reform and Immigrant Responsibility Act of 1996, which authorized further barriers and the reinforcement of Bush's fence.",
+        "source_url": "https://www.wikiwand.com/en/Illegal_Immigration_Reform_and_Immigrant_Responsibility_Act_of_1996"
+      }
+    ],
+    "border_comprehension": "",
+    "border_budget": "$324 billion the federal government has spent an estimated $324 billion on the agencies that carry out immigration enforcement",
+    "further_resources": []
   },
   {
     "border_id": "Belize–Guatemala",
@@ -45,7 +70,8 @@
     "description": "The Belizean–Guatemalan territorial dispute is an unresolved binational territorial dispute between the states of Belize and Guatemala, neighbours in Central America. The territory of Belize has been claimed in whole or in part by Guatemala since 1821.",
     "entity_1": "Belize",
     "entity_2": "Guatemala",
-    "technologies": []
+    "material": "",
+    "budget": ""
   },
   {
     "border_id": "Botswana/Zimbabwe",

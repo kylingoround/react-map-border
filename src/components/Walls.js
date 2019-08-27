@@ -242,7 +242,7 @@ class Walls extends Component {
     rectStats: {
       width: 20,
       height: 20,
-      gap: 5,
+      gap: 10,
       offset: 0
     },
     isDisplayingToolTip: false,
@@ -270,7 +270,7 @@ class Walls extends Component {
     let rectWidth = this.state.rectStats.width;
     let gap = this.state.rectStats.gap;
 
-    let offset = (svgWidth - (num * rectWidth + (num - 1) * gap)) / 2 - gap * 2;
+    let offset = (svgWidth - (num * rectWidth + (num - 1) * gap)) / 2 - gap;
 
     prevState.offset = offset;
     this.setState({ rectStats: prevState }, () => console.log(this.state));
@@ -296,6 +296,12 @@ class Walls extends Component {
           )}
           {/* <InfoDiv data={this.state.toolTipData} /> */}
         </WallPageWrapper>
+        <div>
+          <div>View Switches</div>
+          <button>Length</button>
+          <button>Impact (Arrest Rate, Cross Rate)</button>
+          <button>Type of Wall</button>
+        </div>
         <Svg
           viewBox={"0 0 " + svgDimensions.width + " " + svgDimensions.height}
         >
