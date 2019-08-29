@@ -165,11 +165,11 @@ class WorldMap extends Component {
     const { svgDimensions, missingData } = this.state;
     return (
       <>
-        <MapZoomButtonDiv>
+        {/* <MapZoomButtonDiv>
           <button onClick={this.handleZoomIn}>{"Zoom in"}</button>
           <button onClick={this.handleZoomOut}>{"Zoom out"}</button>
           <button onClick={this.handleReset}>{"Reset"}</button>
-        </MapZoomButtonDiv>
+        </MapZoomButtonDiv> */}
         <Motion
           className="motion-ele"
           defaultStyle={{
@@ -252,7 +252,7 @@ class WorldMap extends Component {
                     </Marker>
                   ))}
                 </Markers>
-                <Markers>
+                {/* <Markers>
                   {missingData &&
                     missingData.map(
                       (d, i) =>
@@ -278,7 +278,7 @@ class WorldMap extends Component {
                           </Marker>
                         )
                     )}
-                </Markers>
+                </Markers> */}
               </ZoomableGroup>
             </StyledComposableMap>
           )}

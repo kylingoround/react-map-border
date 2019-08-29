@@ -1,65 +1,5 @@
 [
   {
-    "border_id": "US-Mexico",
-    "border_name": "U.S. - Mexico Border",
-    "built_status": ["Built", "Proposed", "Under Construction"],
-    "coordinates": {
-      "raw": "32°32′4″N 117°7′19″W",
-      "lat": "32.5344444",
-      "long": "-117.1219444"
-    },
-    "length": "1044",
-    "purpose": ["anti illegal immigration", "anti drug trafficking"],
-    "description": "The Mexico–United States barrier (Spanish: barrera México–Estados Unidos), also known as the border wall, is a series of vertical barriers along the Mexico–United States border intended to reduce illegal immigration to the United States from Mexico.[1] The barrier is not a continuous structure, but a series of obstructions classified as 'fences' or 'walls'.",
-    "entity_1": "US",
-    "entity_2": "Mexico",
-    "entity_1_continent": "North America",
-    "entity_2_continent": "North America",
-    "entity_1_country_code": "US",
-    "entity_2_country_code": "MX",
-    "technologies": ["camera", "patrol", "steel fences"],
-    "material": ["steel bollard"],
-    "height": "18 - 26 ft",
-    "statistics": [
-      {
-        "content": "97% of border apprehensions (foreign nationals who are caught being in the U.S. illegally) by the Border Patrol in 2010 occurred at the southwest border.",
-        "source": "Wikipedia",
-        "url": "https://www.wikiwand.com/en/Mexico%E2%80%93United_States_barrier"
-      },
-      {
-        "content": "The number of Border Patrol apprehensions declined 61% from 1,189,000 in 2005 to 723,840 in 2008 to 463,000 in 2010.",
-        "source": "Wikipedia",
-        "url": "https://www.wikiwand.com/en/Mexico%E2%80%93United_States_barrier"
-      },
-      {
-        "content": " Border apprehensions in 2010 were at their lowest level since 1972.In December 2016 apprehensions were at 58,478, whereas in March 2017, there were 17,000 apprehensions, which was the fifth month in a row of decline.",
-        "source": "Wikipedia",
-        "url": "https://www.wikiwand.com/en/Mexico%E2%80%93United_States_barrier"
-      }
-    ],
-    "material": ["steel bollard"],
-    "history": [
-      {
-        "year": 1993,
-        "event": "US President George H. W. Bush approved the initial 14 miles of fencing along the San Diego–Tijuana border.",
-        "source_url": "https://www.fox47news.com/news/national/this-is-how-much-of-the-border-wall-has-been-built-so-far"
-      },
-      {
-        "year": 1994,
-        "event": "Further barriers were built from 1994 under the presidency of Bill Clinton as part of three larger operations to taper transportation of illegal drugs manufactured in Latin America and immigration: Operation Gatekeeper in California, Operation Hold-the-Line[11] in Texas, and Operation Safeguard.",
-        "source_url": "http://www.globalsecurity.org/military/ops/gatekeeper.htm"
-      },
-      {
-        "year": 1996,
-        "event": "Clinton signed the Illegal Immigration Reform and Immigrant Responsibility Act of 1996, which authorized further barriers and the reinforcement of Bush's fence.",
-        "source_url": "https://www.wikiwand.com/en/Illegal_Immigration_Reform_and_Immigrant_Responsibility_Act_of_1996"
-      }
-    ],
-    "border_comprehension": "",
-    "border_budget": "$324 billion the federal government has spent an estimated $324 billion on the agencies that carry out immigration enforcement",
-    "further_resources": []
-  },
-  {
     "border_id": "Belize–Guatemala",
     "border_name": "Belize–Guatemala",
     "built_status": ["proposed", "agreed"],
@@ -122,8 +62,8 @@
     "length": "20",
     "purpose": ["anti-illegal immigration"],
     "description": "",
-    "entity_1": "Brunei",
-    "entity_2": "Limbang - Malaysia",
+    "entity_1": "Brunei Darussalam",
+    "entity_2": "Malaysia",
     "entity_1_continent": "Asia",
     "entity_2_continent": "Asia",
     "entity_1_country_code": "BN",
@@ -199,7 +139,7 @@
     "length": "32",
     "purpose": ["anti-illegal immigration"],
     "description": "The Frontier Closed Area, established by the Frontier Closed Area Order, 1951,[1] is a border zone area in Hong Kong, extended inwards from the border with China. For anyone to enter the area, a Closed Area Permit is required. Established to prevent migrants from China and other illegal activities, the closed area is fenced along its perimeter to serve as a buffer between the closed border and the rest of the territory. Developments are tightly controlled within the area, leading to less construction and causing most of the area to become a natural habitat for animals and plants.",
-    "entity_1": "Hong Kong",
+    "entity_1": "China, Hong Kong SAR",
     "entity_2": "China",
     "entity_1_continent": "Asia",
     "entity_2_continent": "Asia",
@@ -249,7 +189,7 @@
     "purpose": ["anti-illegal immigration"],
     "description": "Fences more than 13ft high, topped with barbed wire, are now being erected along an eight-mile stretch of the Yalu river around the Chinese city of Dandong. This is a popular escape point for North Korea refugees seeking food or better lives, Korea's Yonhap news agency reported.",
     "entity_1": "China",
-    "entity_2": "North Korea",
+    "entity_2": "Dem. People's Republic of Korea",
     "entity_1_continent": "Asia",
     "entity_2_continent": "Asia",
     "entity_1_country_code": "CN",
@@ -274,7 +214,7 @@
     "purpose": ["anti-terrorism", "anti-illegal immigration"],
     "description": "The Egypt–Gaza barrier refers to the steel border barrier along the border between Egypt and the Gaza Strip. Because it is essentially splitting the city of Rafah, the steel barrier is also referred as a separation wall.",
     "entity_1": "Egypt",
-    "entity_2": "Palastine",
+    "entity_2": "State of Palestine",
     "entity_1_continent": ["Africa", "Asia"],
     "entity_2_continent": "Asia",
     "entity_1_country_code": "EG",
@@ -300,7 +240,7 @@
       "anti-illegal immigration"
     ],
     "description": "The Estonia–Russia border is the international border between Republic of Estonia (EU member) and the Russian Federation (CIS member). The border is 294 kilometres (183 mi) long. In its present form, it has not changed since 1945, when Estonia became part of the Soviet Union. A small change was to take place in 2014, but this has yet to take effect.[",
-    "entity_1": "Russia",
+    "entity_1": "Russian Federation",
     "entity_2": "Estonia",
     "entity_1_continent": ["Europe", "Asia"],
     "entity_2_continent": "Europe",
@@ -323,7 +263,7 @@
     "length": "30",
     "purpose": ["anti-illegal immigration"],
     "description": "The North Macedonia border barrier is a border barrier built by North Macedonia on its border with Greece. It was constructed as a response to the European migrant crisis. The construction of the barrier began in November 2015, modeled similarly to the Hungarian border barrier,[1] and it is 30 km (19 mi) long as of early 2016.",
-    "entity_1": "Republic of North Macedonia",
+    "entity_1": "TFYR Macedonia",
     "entity_2": "Greece",
     "entity_1_continent": "Europe",
     "entity_2_continent": "Europe",
@@ -337,24 +277,24 @@
     "border_id": "Malaysia–Thailand border",
     "border_name": "Malaysia–Thailand border",
     "built_status": ["Proposed"],
-    "built-year": "N/A",
+    "built-year": "2001",
     "coordinates": {
       "raw": "5.725702^N, 101.070998^E",
       "lat": "5.725702",
       "long": "101.070998"
     },
     "length": "650",
-    "purpose": ["anti-terrorism"],
-    "description": "",
+    "purpose": ["anti-smuggling", "anti-encroachment", "anti-terrorism"],
+    "description": "In the 1970s, both Malaysia and Thailand constructed walls along their common border, mostly in Perlis/Satun and Perlis/Songkhla as well as Kedah/Songkhla portions of the border to curb smuggling. The walls were of concrete, steel, and topped barbed wire as well as iron fencing at other stretches. As both countries constructed their walls on their own territory, a strip of 'no man's-land' about 10 m wide was created and this strip of land became a convenient refuge for smugglers (not all smuggling was deterred by the wall) and drug runners.",
     "entity_1": "Thailand",
     "entity_2": "Malaysia",
     "entity_1_continent": "Asia",
     "entity_2_continent": "Asia",
     "entity_1_country_code": "TH",
     "entity_2_country_code": "MY",
-    "technologies": [],
+    "technologies": ["barbed wire"],
     "resources": [],
-    "thumbnail": ""
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Padang_Besar%2C_Perlis%2C_Malaysia_-_panoramio_%281%29.jpg/1024px-Padang_Besar%2C_Perlis%2C_Malaysia_-_panoramio_%281%29.jpg?1566998868239"
   },
   {
     "border_id": "Melilla border fence",
@@ -469,7 +409,7 @@
     "entity_2_continent": "Asia",
     "entity_1_country_code": "IN",
     "entity_2_country_code": "PK",
-    "technologies": ["concertina wire "],
+    "technologies": ["concertina wire"],
     "resources": [],
     "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Kashmir_map.jpg/480px-Kashmir_map.jpg"
   },
@@ -486,7 +426,7 @@
     "length": "700",
     "purpose": ["anti-drug smuggling"],
     "description": "The Iran–Pakistan border is the international border between Iran and Pakistan, demarcating Pakistan's Balochistan province from Iran's Sistan and Balochistan Province; it is 959 km (596 miles) in length. Since circa 2007 Iran has started constructing a border barrier as a replacement for an intermittent tattered border fence.",
-    "entity_1": "Iran",
+    "entity_1": "Iran (Islamic Republic of)",
     "entity_2": "Pakistan",
     "entity_1_continent": "Asia",
     "entity_2_continent": "Asia",
@@ -532,8 +472,8 @@
     "length": "248",
     "purpose": ["conflict zone"],
     "description": "The Korean Demilitarized Zone is a strip of land running across the Korean Peninsula. It is established by the provisions of the Korean Armistice Agreement to serve as a buffer zone between North Korea and South Korea. The demilitarized zone (DMZ) is a border barrier that divides the Korean Peninsula roughly in half. It was created by agreement between North Korea, China and the United Nations Command in 1953. The DMZ is 250 kilometres (160 miles) long, and about 4 kilometres (2.5 miles) wide.",
-    "entity_1": "South Korea",
-    "entity_2": "North Korea",
+    "entity_1": "Republic of Korea",
+    "entity_2": "Dem. People's Republic of Korea",
     "entity_1_continent": "Asia",
     "entity_2_continent": "Asia",
     "entity_1_country_code": "KR",
@@ -544,7 +484,7 @@
   },
   {
     "border_id": "Kruger National Park",
-    "border_name": "",
+    "border_name": "SouthAfrica-Mozambique Border",
     "built_status": [],
     "built-year": "N/A",
     "coordinates": {
@@ -553,18 +493,22 @@
       "long": "0"
     },
     "length": "",
-    "purpose": [],
+    "purpose": ["anti illegal immigration"],
     "description": "",
-    "entity_1": "",
-    "entity_2": "",
-    "technologies": [],
-    "resources": [],
+    "entity_1": "South Africa",
+    "entity_2": "Mozambique",
+    "entity_1_country_code": "ZA",
+    "entity_2_country_code": "MZ",
+    "technologies": ["electrified fence", "razor tape", "patrol"],
+    "resources": [
+      "https://www.newscientist.com/article/mg12517011-000-hundreds-killed-by-south-africas-border-fence/"
+    ],
     "thumbnail": ""
   },
   {
     "border_id": "South Africa/Zimbabwe Border",
     "border_name": "",
-    "built_status": [],
+    "built_status": ["built"],
     "built-year": "N/A",
     "coordinates": {
       "raw": "",
@@ -572,11 +516,13 @@
       "long": "0"
     },
     "length": "",
-    "purpose": [],
+    "purpose": ["anti illegal immigration"],
     "description": "",
-    "entity_1": "",
-    "entity_2": "",
-    "technologies": [],
+    "entity_1": "South Africa",
+    "entity_2": "Zimbabwe",
+    "entity_1_country_code": "ZA",
+    "entity_2_country_code": "ZW",
+    "technologies": ["electrified fence", "razor tape"],
     "resources": [],
     "thumbnail": ""
   },
@@ -713,7 +659,7 @@
     "purpose": ["anti-terrorism", "anti-illegal immigration"],
     "description": "The Syria–Turkey barrier is a border wall and fence under construction along the Syria–Turkey border aimed at preventing illegal crossings and smuggling from Syria into Turkey",
     "entity_1": "Turkey",
-    "entity_2": "Syria",
+    "entity_2": "Syrian Arab Republic",
     "entity_1_continent": ["Europe", "Asia"],
     "entity_2_continent": "Asia",
     "entity_1_country_code": "TR",
@@ -736,7 +682,7 @@
     "purpose": ["anti-terrorism", "anti-illegal immigration"],
     "description": "The Iran–Turkey barrier is a border barrier under construction along the Turkey-Iran border aimed at preventing illegal crossings and smuggling across the border. The wall will cover 144 km of the 499 km Turkey-Iran border. As of December 2017, half of the border barrier has been finished. According to the responsible officials, the border barrier will be completed by spring 2019  The national housing commission TOKİ is building the wall in the provinces Iğdır and Ağrı. Iran has welcomed the construction of the border barrier.",
     "entity_1": "Turkey",
-    "entity_2": "Iran",
+    "entity_2": "Iran (Islamic Republic of)",
     "entity_1_continent": ["Europe", "Asia"],
     "entity_2_continent": "Asia",
     "entity_1_country_code": "TR",
@@ -781,7 +727,7 @@
     "length": "2000",
     "purpose": ["anti-weapon smuggling", "conflict zone"],
     "description": "Russia–Ukraine barrier, also known as Ukrainian Wall or European Wall,or as Project Wall in Ukraine is a fortified border barrier currently under construction by Ukraine on the Russia–Ukraine border. The aim of the project, according to Ukraine, is preventing Russian military intervention in Ukraine[better source needed and to assist with obtaining visa-free travel with the European Union.",
-    "entity_1": "Russia",
+    "entity_1": "Russian Federation",
     "entity_2": "Ukraine",
     "entity_1_continent": ["Europe", "Asia"],
     "entity_2_continent": "Europe",
@@ -831,7 +777,7 @@
     "length": "100",
     "purpose": ["anti-illegal immigration"],
     "description": "The Mexico–United States barrier, also known as the border wall, is a series of vertical barriers along the Mexico–United States border intended to reduce illegal immigration to the United States from Mexico. The barrier is not a continuous structure, but a series of obstructions classified as 'fences' or 'walls'.",
-    "entity_1": "United States",
+    "entity_1": "United States of America",
     "entity_2": "Mexico",
     "entity_1_continent": "North America",
     "entity_2_continent": "North America",
@@ -901,7 +847,7 @@
     "purpose": ["anti-terrorism"],
     "description": "The Israeli West Bank barrier or wall is a separation barrier in the West Bank or along the Green Line. Israel considers it a security barrier against terrorism, while Palestinians call it a racial segregation or apartheid wall.At a total length of 708 kilometres (440 mi) upon completion, the border traced by the barrier is more than double the length of the Green Line, with 15% running along it or in Israel, while the remaining 85% cuts at times 18 kilometres (11 mi) deep into the West Bank, isolating about 9% of it, leaving an estimated 25,000 Palestinians isolated from the bulk of that territory.",
     "entity_1": "Israel",
-    "entity_2": "Palestine",
+    "entity_2": "State of Palestine",
     "entity_1_continent": "Asia",
     "entity_2_continent": "Asia",
     "entity_1_country_code": "IL",
@@ -970,7 +916,7 @@
     "purpose": ["anti-terrorism"],
     "description": "The Israel−Gaza security barrier is a border barrier first constructed by Israel in 1994 between the Gaza Strip and Israel. The barrier runs along the entire land border of the Gaza Strip.",
     "entity_1": "Israel",
-    "entity_2": "Palestine",
+    "entity_2": "State of Palestine",
     "entity_1_continent": "Asia",
     "entity_2_continent": "Asia",
     "entity_1_country_code": "IL",

@@ -122,6 +122,7 @@ class Details extends Component {
     });
     this.setState({ chart_1_data: await Promise.all(data) });
   }
+
   handleDataSwitch(indicator_name) {
     console.log(this.state);
     console.log(indicator_name);

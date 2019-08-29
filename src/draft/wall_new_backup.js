@@ -8,8 +8,6 @@ import { Scrollbars } from "react-custom-scrollbars";
 import barrier_data from "../data/barrier_data_updated.json";
 import jsonp from "@tmcw/jsonp";
 
-import { BarChart, Bar } from "recharts";
-
 // const WallPageWrapper = styled.div`
 //   pointer-events: none;
 //   width: 100vw;
@@ -21,13 +19,6 @@ import { BarChart, Bar } from "recharts";
 //   z-index: 2;
 //   position: fixed;
 // `;
-
-const StyledWhatever = styled.div`
-  /* transform: rotate(180deg) scaleX(-1); */
-  /* transform-style: preserve-3d; */
-  position: relative;
-  transform: rotateX(3.142rad);
-`;
 
 const list_of_indicators = [
   { name: "GDP", code: "NY.GDP.MKTP.CD" },
@@ -70,13 +61,7 @@ const WidgetWrapper = styled.div`
   border: 5px solid #ffb800;
 `;
 
-const Ghost = styled.div`
-  width: 10px;
-  height: 7vh;
-`;
-
 const ScrollableContainer = styled.div`
-  /* margin-top: 7vh; */
   overflow-x: hidden;
   overflow-y: auto;
   /* margin-top: 2vh; */
@@ -260,11 +245,8 @@ const RectGroup = props => {
             height={rectStats.height}
             d={d}
             fill="#F62919"
-            // fill={}
             updateTooltipData={updateTooltipData} // second children
-          >
-            <>{console.log(d.purpose)}</>
-          </RectwithState>
+          />
 
           {migrantStockChange.find(x => x.destination === d.entity_2) && (
             <RectwithStateData
@@ -471,7 +453,7 @@ const RectWall = class RectWall extends Component {
     };
     const visualSvgBoxStats = {
       width: 2500,
-      height: 300
+      height: 1400
     };
     const mockupData = [1, 2, 3, 4, 5];
     const chartMockupData = ["10", "20", "30", "40"];
@@ -532,16 +514,6 @@ const RectWall = class RectWall extends Component {
                 </svg>
               </CloseBtn>
               <ScrollableContainer>
-                <Ghost />
-                {this.findIndicator(widgetChartData1) && (
-                  <BarChart
-                    width={150}
-                    height={40}
-                    data={this.findIndicator(widgetChartData1).chartData}
-                  >
-                    <Bar dataKey="value" fill="#8884d8" />
-                  </BarChart>
-                )}
                 <BigHead>
                   <svg
                     viewBox={
@@ -589,6 +561,54 @@ const RectWall = class RectWall extends Component {
                         ))}
                       </g>
                     </def>
+                    {// widgetChartData1 &&
+                    // chartMockupData
+                    // this.findIndicator(widgetChartData1).chartData
+                    this.findIndicator(widgetChartData1) &&
+                      this.findIndicator(widgetChartData1).chartData.map(
+                        (d, i) => (
+                          <rect
+                            key={"top-rect-" + i}
+                            className="upper_chart"
+                            width={
+                              chartSpaceWidth /
+                              this.findIndicator(widgetChartData1).chartData
+                                .length
+                            }
+                            height={
+                              (rectPrimeStats.height * d.value) /
+                              this.findMaxRange(widgetChartData1)
+                            }
+                            // height={chartSpaceHeight}
+                            x={
+                              (chartSpaceWidth / chartMockupData.length) * i +
+                              (visualSvgBoxStats.width - chartSpaceWidth) / 2
+                            }
+                            // baseline - gap - height
+                            y={
+                              (visualSvgBoxStats.height -
+                                rectPrimeStats.height) /
+                                2 -
+                              // chartSpaceHeight -
+                              (rectPrimeStats.height * d.value) /
+                                this.findMaxRange(widgetChartData1) -
+                              chartSpaceGap
+                            }
+                            fill={"#FFB800"}
+                          >
+                            <>
+                              {this.findMaxRange(widgetChartData1)}
+                              {/* {console.log(
+                                this.findIndicator(widgetChartData1) &&
+                                  this.findIndicator(widgetChartData1).chartData
+                              )} */}
+                            </>
+                            <>{console.log("pina")}</>
+                            <>{console.log(widgetChartData1)}</>
+                          </rect>
+                        )
+                      )}
+
                     {mockupData.map((d, i) => (
                       <use
                         key={"wall-group-" + i}
@@ -601,25 +621,12 @@ const RectWall = class RectWall extends Component {
                             2
                         }
                         y={
-                          (visualSvgBoxStats.height - rectPrimeStats.height) /
-                            2 +
-                          30
+                          (visualSvgBoxStats.height - rectPrimeStats.height) / 2
                         }
                       />
                     ))}
                   </svg>
                 </BigHead>
-                {this.findIndicator(widgetChartData1) && (
-                  <StyledWhatever>
-                    <BarChart
-                      width={150}
-                      height={40}
-                      data={this.findIndicator(widgetChartData1).chartData}
-                    >
-                      <Bar dataKey="value" fill="#8884d8" />
-                    </BarChart>
-                  </StyledWhatever>
-                )}
 
                 <ContentTextWrapper>
                   {/* <ContentTextTitle>US-Mexico Barrier</ContentTextTitle> */}
@@ -674,3 +681,36 @@ const RectWall = class RectWall extends Component {
 };
 
 export default RectWall;
+
+/* border_id: "Saudi–Yemen barrier"
+    border_name: "Saudi-Yemen barrier"
+    built-year: "2004"
+    built_status: ["built"]
+    coordinates: {raw: "17.433414^N, 44.718835^E", lat: "17.433414", long: "44.718835"}
+    description: "The Saudi–Yemen barrier is a physical barrier constructed by Saudi Arabia along part of its 1,800-kilometer (1,100 mi) border with Yemen. It is a structure made of pipeline three metres (10 ft) high filled with concrete, acting as a security barrier along sections of the now fully demarcated border with Yemen and fitted with electronic detection equipment."
+    entity_1: "Saudi Arabia"
+    entity_1_continent: "Asia"
+    entity_1_country_code: "SA"
+    entity_2: "Yemen"
+    entity_2_continent: "Asia"
+    entity_2_country_code: "YE"
+    length: "75"
+    purpose: ["anti-illegal immigration"]
+    resources: []
+    technologies: []
+    thumbnail: " 
+    */
+
+// border_id: "Turkey–Syria border barrier"
+// border_name: "Turkey–Syria border barrier"
+// built-year: "N/A"
+// built_status: ["Under Construction"]
+// coordinates: {raw: "36.870718^N,38.468054^E", lat: "36.870718", long: "38.468054"}
+// description: "The Syria–Turkey barrier is a border wall and fence under construction along the Syria–Turkey border aimed at preventing illegal crossings and smuggling from Syria into Turkey"
+// entity_1: "Turkey"
+// entity_2: "Syria"
+// length: "828"
+// purpose: (2) ["anti-terrorism", "anti-illegal immigration"]
+// resources: []
+// technologies: (2) ["concrete wall", "razor wire"]
+// thumbnail: "https://cdnuploads.aa.com.tr/uploads/C
