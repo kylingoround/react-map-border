@@ -9,6 +9,7 @@ import barrier_data from "../data/barrier_data_updated.json";
 import jsonp from "@tmcw/jsonp";
 
 import { BarChart, Bar } from "recharts";
+import Globe from "./globe";
 
 // const WallPageWrapper = styled.div`
 //   pointer-events: none;
@@ -22,6 +23,11 @@ import { BarChart, Bar } from "recharts";
 //   position: fixed;
 // `;
 
+// charts
+
+const GlobeIndexWrapper = styled.div`
+  z-index: 0;
+`;
 const StyledWhatever = styled.div`
   /* transform: rotate(180deg) scaleX(-1); */
   /* transform-style: preserve-3d; */
@@ -37,10 +43,11 @@ const list_of_indicators = [
 const PageParent = styled.div`
   overflow: hidden;
   /* width: 100vw; */
-  height: 98vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #1a1a1a;
 `;
 
 const WidgetImg = styled.img`
@@ -77,6 +84,7 @@ const Ghost = styled.div`
 
 const ScrollableContainer = styled.div`
   /* margin-top: 7vh; */
+  position: fixed;
   overflow-x: hidden;
   overflow-y: auto;
   /* margin-top: 2vh; */
@@ -93,6 +101,7 @@ const ScrollableContainer = styled.div`
     background: #6c1107;
     border-radius: 10px;
   }
+  z-index: 50;
 `;
 
 const StyledScrollbars = styled(Scrollbars)`
@@ -147,7 +156,7 @@ const StyledSVG = styled.svg`
   left: 0;
   bottom: 0;
   right: 0;
-  background-color: #1a1a1a;
+  /* background-color: #1a1a1a; */
   /* position: fixed; */
   /* z-index: 1; */
 `;
@@ -235,8 +244,6 @@ const RectGroup = props => {
 
   return (
     <g>
-      {/* <>{console.log(migrantStockChange)}</> */}
-      {/* <>{console.log(migrantStockChange.find(x => x.destination === "China"))}</> */}
       {barrierData.map((d, i) => (
         <g key={i} onClick={() => handleOpenWidget(d)}>
           {migrantStockChange.find(x => x.destination === d.entity_1) && (
@@ -299,7 +306,8 @@ const RectWall = class RectWall extends Component {
       offset: 0
     },
     svgDimensions: {
-      width: 960,
+      // width: 960,
+      width: 1800,
       height: 700
     },
     rectHoverTooltipData: [],
@@ -480,39 +488,43 @@ const RectWall = class RectWall extends Component {
     const chartSpaceGap = 50;
     return (
       <>
-        <StyledSVG
-          viewBox={"0 0 " + svgDimensions.width + " " + svgDimensions.height}
-          ref={ref => (this.fooRef = ref)}
-          data-tip="tooltip"
-        >
-          {loadingFinished && (
-            <RectGroup
-              barrierData={this.state.barrierData}
-              rectStats={this.state.rectStats}
-              svgDimensions={this.state.svgDimensions}
-              migrantStockChange={this.state.migrantStockChange}
-              migrantStockTotal={this.migrantStockTotal}
-              updateTooltipData={this.updateTooltipData} // give it to first children
-              handleOpenWidget={this.handleOpenWidget}
-            />
-          )}
-        </StyledSVG>
-        {/* <p ref={ref => (this.fooRef = ref)} data-tip="hello">
+        <PageParent>
+          <GlobeIndexWrapper>
+            <Globe />
+          </GlobeIndexWrapper>
+          <StyledSVG
+            viewBox={"0 0 " + svgDimensions.width + " " + svgDimensions.height}
+            ref={ref => (this.fooRef = ref)}
+            data-tip="tooltip"
+          >
+            {loadingFinished && (
+              <RectGroup
+                barrierData={this.state.barrierData}
+                rectStats={this.state.rectStats}
+                svgDimensions={this.state.svgDimensions}
+                migrantStockChange={this.state.migrantStockChange}
+                migrantStockTotal={this.migrantStockTotal}
+                updateTooltipData={this.updateTooltipData} // give it to first children
+                handleOpenWidget={this.handleOpenWidget}
+              />
+            )}
+          </StyledSVG>
+          {/* <p ref={ref => (this.fooRef = ref)} data-tip="hello">
           <div>what is this?</div>
         </p> */}
-        <ReactTooltip>
-          {this.state.tooltipData && (
-            <div>
-              <div>Border Name: {this.state.tooltipData.border_name}</div>
-              <div>Status: {this.state.tooltipData.built_status}</div>
-              <div>Length: {this.state.tooltipData.length}</div>
-              <div>Entity 1: {this.state.tooltipData.entity_1}</div>
-              <div>Entity 2: {this.state.tooltipData.entity_2}</div>
-              <div>Purpose: {this.state.tooltipData.purpose}</div>
-            </div>
-          )}
-        </ReactTooltip>
-        <PageParent>
+          <ReactTooltip>
+            {this.state.tooltipData && (
+              <div>
+                <div>Border Name: {this.state.tooltipData.border_name}</div>
+                <div>Status: {this.state.tooltipData.built_status}</div>
+                <div>Length: {this.state.tooltipData.length}</div>
+                <div>Entity 1: {this.state.tooltipData.entity_1}</div>
+                <div>Entity 2: {this.state.tooltipData.entity_2}</div>
+                <div>Purpose: {this.state.tooltipData.purpose}</div>
+              </div>
+            )}
+          </ReactTooltip>
+          {/* <PageParent> */}
           {isDisplayingWidget && (
             <WidgetWrapper>
               <CloseBtn onClick={this.handleCloseWidget}>

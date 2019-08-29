@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 // map related modules
-import { geoMercator, geoPath } from "d3-geo";
 // even more projections if needed
 // import { geoMiller } from "d3-geo-projection";
 import { feature } from "topojson-client";
