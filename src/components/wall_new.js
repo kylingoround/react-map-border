@@ -151,7 +151,8 @@ const RectGroup = props => {
     migrantStockTotal,
     isUp,
     updateTooltipData,
-    handleOpenWidget
+    handleOpenWidget,
+    handleRectHoverHighLevel
   } = props;
 
   const smallRectGap = 10;
@@ -159,7 +160,11 @@ const RectGroup = props => {
   return (
     <g>
       {barrierData.map((d, i) => (
-        <g key={i} onClick={() => handleOpenWidget(d)}>
+        <g
+          key={i}
+          onClick={() => handleOpenWidget(d)}
+          onMouseEnter={() => handleRectHoverHighLevel(d)}
+        >
           {migrantStockChange.find(x => x.destination === d.entity_1) && (
             <RectwithStateData
               isUp={true}
@@ -232,7 +237,8 @@ const RectWall = class RectWall extends Component {
     isDisplayingWelcome: false,
     widgetChartData1: [],
     widgetChartData2: [],
-    currentIndicator: "GDP (current US$)"
+    currentIndicator: "GDP (current US$)",
+    hoverStats: null
   };
 
   calculateGap(data) {
@@ -347,6 +353,16 @@ const RectWall = class RectWall extends Component {
     console.log(maxVal);
   }
 
+  handleRectHoverHighLevel = d => {
+    console.log("hovered");
+    let coordinates = [
+      parseFloat(d.coordinates.long),
+      parseFloat(d.coordinates.lat) - 20
+    ];
+    console.log(coordinates);
+    this.setState({ hoverStats: coordinates });
+  };
+
   componentDidMount() {
     // migrant stock change rate
 
@@ -376,7 +392,7 @@ const RectWall = class RectWall extends Component {
   }
 
   componentDidUpdate() {
-    console.log(this.state);
+    // console.log(this.state);
   }
   render() {
     const {
@@ -386,7 +402,8 @@ const RectWall = class RectWall extends Component {
       isDisplayingWidget,
       widgetDisplayData,
       widgetChartData1,
-      widgetChartData2
+      widgetChartData2,
+      hoverStats
     } = this.state;
 
     const rectPrimeStats = {
@@ -406,7 +423,7 @@ const RectWall = class RectWall extends Component {
       <>
         <PageParent>
           <GlobeIndexWrapper>
-            <Globe barrierData={barrierData} />
+            <Globe barrierData={barrierData} hoverStats={hoverStats} />
           </GlobeIndexWrapper>
 
           <StyledSVG
@@ -423,6 +440,7 @@ const RectWall = class RectWall extends Component {
                 migrantStockTotal={this.migrantStockTotal}
                 updateTooltipData={this.updateTooltipData} // give it to first children
                 handleOpenWidget={this.handleOpenWidget}
+                handleRectHoverHighLevel={this.handleRectHoverHighLevel}
               />
             )}
           </StyledSVG>

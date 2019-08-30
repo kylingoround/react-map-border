@@ -39,10 +39,13 @@ const wrapperStyles = {
 
 const ButtonWrapper = styled.div`
   position: fixed;
-  top: 2rem;
+  top: 47vh;
   left: 2rem;
+  display: flex;
+  flex-direction: column;
 `;
 
+const GlobeBtn = styled.button``;
 // const cities = [
 //   { name: "Zurich", coordinates: [8.5417, 47.3769] },
 //   { name: "Singapore", coordinates: [103.8198, 1.3521] },
@@ -94,6 +97,31 @@ class AlbersUSA extends Component {
       zoom: 1
     });
   };
+  componentDidMount() {
+    // this.props.hoverStatsfromDad != null &&
+    //   this.setState({
+    //     zoom: 2,
+    //     center: this.props.hoverStatsfromDad
+    //   });
+
+    console.log("is there an update?");
+
+    console.log(this.props);
+  }
+  componentDidUpdate() {
+    console.log("is there an update?");
+    console.log(this.props);
+    this.props.hoverStatsfromDad !== this.state.center &&
+      this.props.hoverStatsfromDad &&
+      // <>
+      //   <>{console.log("i shoudl update")}</>
+      //   <>{console.log(this.props)}</>
+      // </>
+      this.setState({
+        zoom: 2,
+        center: this.props.hoverStatsfromDad
+      });
+  }
   render() {
     const { barrierData } = this.props;
     return (
@@ -178,8 +206,23 @@ class AlbersUSA extends Component {
                   {/* <Marker marker={{ coordinates: [ 8.5, 47.3 ] }}> */}
 
                   <Markers>
+                    {this.props.hoverStatsfromDad && (
+                      <Marker
+                        marker={{
+                          coordinates: [
+                            this.state.center[0],
+                            this.state.center[1] + 20
+                          ]
+                        }}
+                      >
+                        {" "}
+                        <circle cx={0} cy={0} r={5} fill="yellow" />
+                      </Marker>
+                    )}
+                  </Markers>
+                  <Markers>
                     {barrierData.map((d, i) => {
-                      console.log(d);
+                      // console.log(d);
                       return (
                         <Marker
                           key={i}
@@ -258,9 +301,9 @@ class Globe extends Component {
   state = {
     topojson: null
   };
-  update() {}
 
   componentDidMount() {
+    console.log("globe initizing");
     fetch("https://unpkg.com/visionscarto-world-atlas/world/110m.json")
       .then(response => {
         return response.json();
@@ -279,7 +322,13 @@ class Globe extends Component {
     const { barrierData } = this.props;
     return (
       <GlobeWrapper>
-        {topojson && <AlbersUSA data={topojson} barrierData={barrierData} />}
+        {topojson && (
+          <AlbersUSA
+            data={topojson}
+            barrierData={barrierData}
+            hoverStatsfromDad={this.props.hoverStats}
+          />
+        )}
       </GlobeWrapper>
     );
   }
