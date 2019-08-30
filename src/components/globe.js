@@ -6,7 +6,7 @@ import { scaleLinear } from "d3-scale";
 import {
   ZoomableGlobe,
   ComposableMap,
-  ZoomableGroup,
+  // ZoomableGroup,
   Geographies,
   Geography,
   Markers,
@@ -22,7 +22,9 @@ const populationScale = scaleLinear()
   .range([5, 22]);
 
 const GlobeWrapper = styled.div`
-  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  /* position: fixed; */
   height: 98vh;
   display: flex;
   justify-content: center;
@@ -57,7 +59,7 @@ const ButtonWrapper = styled.div`
 
 class AlbersUSA extends Component {
   state = {
-    center: [0, 20],
+    center: [-106.490558, 11.748966],
     zoom: 1
   };
   handleZoomIn = () => {
@@ -76,13 +78,24 @@ class AlbersUSA extends Component {
       center: city.coordinates
     });
   };
+  handleBarrierClick = d => {
+    console.log(d);
+    this.setState({
+      zoom: 2,
+      center: [
+        parseFloat(d.coordinates.long),
+        parseFloat(d.coordinates.lat) - 20
+      ]
+    });
+  };
   handleReset = () => {
     this.setState({
-      center: [0, 20],
+      center: [-106.490558, 11.748966],
       zoom: 1
     });
   };
   render() {
+    const { barrierData } = this.props;
     return (
       <>
         <ButtonWrapper>
@@ -145,7 +158,7 @@ class AlbersUSA extends Component {
                                 outline: "none"
                               },
                               hover: {
-                                fill: "red",
+                                fill: "#1a1a1a",
                                 stroke: "#607D8B",
                                 strokeWidth: 0.75,
                                 outline: "none"
@@ -162,6 +175,44 @@ class AlbersUSA extends Component {
                       })
                     }
                   </Geographies>
+                  {/* <Marker marker={{ coordinates: [ 8.5, 47.3 ] }}> */}
+
+                  <Markers>
+                    {barrierData.map((d, i) => {
+                      console.log(d);
+                      return (
+                        <Marker
+                          key={i}
+                          marker={{
+                            coordinates: [d.coordinates.long, d.coordinates.lat]
+                          }}
+                          style={{
+                            default: { opacity: 0.8 },
+                            hidden: { display: "none" }
+                          }}
+                          // onClick={this.handleCityClick}
+                          onClick={() => this.handleBarrierClick(d)}
+                        >
+                          {" "}
+                          <circle
+                            cx={0}
+                            cy={0}
+                            r={5}
+                            fill="rgba(255,0,0,0.5)"
+                            // stroke="#FFF"
+                          />
+                          {/* <circle
+                            cx={0}
+                            cy={0}
+                            r={5 + 2}
+                            fill="transparent"
+                            stroke="#FF5722"
+                          /> */}
+                        </Marker>
+                      );
+                    })}
+                  </Markers>
+
                   <Markers>
                     {cities.map(city => {
                       const radius = populationScale(city.population);
@@ -175,7 +226,7 @@ class AlbersUSA extends Component {
                           }}
                           onClick={this.handleCityClick}
                         >
-                          <circle
+                          {/* <circle
                             cx={0}
                             cy={0}
                             r={radius}
@@ -188,7 +239,7 @@ class AlbersUSA extends Component {
                             r={radius + 2}
                             fill="transparent"
                             stroke="#FF5722"
-                          />
+                          /> */}
                         </Marker>
                       );
                     })}
@@ -225,8 +276,11 @@ class Globe extends Component {
 
   render() {
     const { topojson } = this.state;
+    const { barrierData } = this.props;
     return (
-      <GlobeWrapper>{topojson && <AlbersUSA data={topojson} />}</GlobeWrapper>
+      <GlobeWrapper>
+        {topojson && <AlbersUSA data={topojson} barrierData={barrierData} />}
+      </GlobeWrapper>
     );
   }
 }
