@@ -13,6 +13,9 @@ import Globe from "./globe";
 
 import Widget from "../parts/Widget";
 
+import LogoSVG from "../assets/logo.svg";
+import legend from "../assets/legend.png";
+
 // const WallPageWrapper = styled.div`
 //   pointer-events: none;
 //   width: 100vw;
@@ -26,6 +29,23 @@ import Widget from "../parts/Widget";
 // `;
 
 // charts
+
+const LogoWrapper = styled.div``;
+const LogoSVGWrapper = styled.svg``;
+const LegendWrapper = styled.div``;
+const LegendImgWrapper = styled.img``;
+
+const RectBtn = styled.button`
+  right: 2vw;
+  position: fixed;
+  background-color: #1a1a1a;
+  border: none;
+  color: white;
+  text-align: center;
+  margin: 0.3rem;
+  font-size: 0.5rem;
+  font-family: Overpass, "san-serif";
+`;
 
 const GlobeIndexWrapper = styled.div`
   z-index: 0;
@@ -163,7 +183,7 @@ const RectGroup = props => {
         <g
           key={i}
           onClick={() => handleOpenWidget(d)}
-          onMouseEnter={() => handleRectHoverHighLevel(d)}
+          // onMouseEnter={() => handleRectHoverHighLevel(d)}
         >
           {migrantStockChange.find(x => x.destination === d.entity_1) && (
             <RectwithStateData
@@ -178,19 +198,20 @@ const RectGroup = props => {
               updateTooltipData={updateTooltipData}
             />
           )}
-
-          <RectwithState
-            x={i * (rectStats.width + rectStats.gap) + 10 + rectStats.offset}
-            y={svgDimensions.height / 2 - rectStats.height / 2}
-            width={rectStats.width}
-            height={rectStats.height}
-            d={d}
-            fill="#F62919"
-            // fill={}
-            updateTooltipData={updateTooltipData} // second children
-          >
-            {/* <>{console.log(d.purpose)}</> */}
-          </RectwithState>
+          <g onMouseEnter={() => handleRectHoverHighLevel(d)}>
+            <RectwithState
+              x={i * (rectStats.width + rectStats.gap) + 10 + rectStats.offset}
+              y={svgDimensions.height / 2 - rectStats.height / 2}
+              width={rectStats.width}
+              height={rectStats.height}
+              d={d}
+              fill="#F62919"
+              // fill={}
+              updateTooltipData={updateTooltipData} // second children
+            >
+              <>{console.log(d)}</>
+            </RectwithState>
+          </g>
 
           {migrantStockChange.find(x => x.destination === d.entity_2) && (
             <RectwithStateData
@@ -238,7 +259,8 @@ const RectWall = class RectWall extends Component {
     widgetChartData1: [],
     widgetChartData2: [],
     currentIndicator: "GDP (current US$)",
-    hoverStats: null
+    hoverStats: null,
+    isDisplayingRect: true
   };
 
   calculateGap(data) {
@@ -391,6 +413,16 @@ const RectWall = class RectWall extends Component {
       .then(() => console.log(this.state));
   }
 
+  // this.setState(prevState => ({
+  //   check: !prevState.check
+  // }));
+
+  toggleRectDisplay = () => {
+    this.setState(prevState => ({
+      isDisplayingRect: !prevState.isDisplayingRect
+    }));
+  };
+
   componentDidUpdate() {
     // console.log(this.state);
   }
@@ -403,7 +435,8 @@ const RectWall = class RectWall extends Component {
       widgetDisplayData,
       widgetChartData1,
       widgetChartData2,
-      hoverStats
+      hoverStats,
+      isDisplayingRect
     } = this.state;
 
     const rectPrimeStats = {
@@ -425,13 +458,16 @@ const RectWall = class RectWall extends Component {
           <GlobeIndexWrapper>
             <Globe barrierData={barrierData} hoverStats={hoverStats} />
           </GlobeIndexWrapper>
+          <div />
+          <div>{/* <img src={legend} alt="legend" /> */}</div>
+          <RectBtn onClick={this.toggleRectDisplay}>Toggle Display</RectBtn>
 
           <StyledSVG
             viewBox={"0 0 " + svgDimensions.width + " " + svgDimensions.height}
             ref={ref => (this.fooRef = ref)}
             data-tip="tooltip"
           >
-            {loadingFinished && (
+            {loadingFinished && isDisplayingRect && (
               <RectGroup
                 barrierData={this.state.barrierData}
                 rectStats={this.state.rectStats}
@@ -444,9 +480,7 @@ const RectWall = class RectWall extends Component {
               />
             )}
           </StyledSVG>
-          {/* <p ref={ref => (this.fooRef = ref)} data-tip="hello">
-          <div>what is this?</div>
-        </p> */}
+
           <ReactTooltip>
             {this.state.tooltipData && (
               <div>

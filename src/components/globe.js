@@ -39,13 +39,23 @@ const wrapperStyles = {
 
 const ButtonWrapper = styled.div`
   position: fixed;
-  top: 47vh;
+  top: 46vh;
   left: 2rem;
   display: flex;
   flex-direction: column;
 `;
 
-const GlobeBtn = styled.button``;
+const GlobeBtn = styled.button`
+  /* background-color: #333; */
+  background-color: #1a1a1a;
+
+  border: none;
+  color: white;
+  text-align: center;
+  margin: 0.3rem;
+  font-size: 0.5rem;
+  font-family: Overpass, "san-serif";
+`;
 // const cities = [
 //   { name: "Zurich", coordinates: [8.5417, 47.3769] },
 //   { name: "Singapore", coordinates: [103.8198, 1.3521] },
@@ -127,9 +137,9 @@ class AlbersUSA extends Component {
     return (
       <>
         <ButtonWrapper>
-          <button onClick={this.handleZoomIn}>{"Zoom in"}</button>
-          <button onClick={this.handleZoomOut}>{"Zoom out"}</button>
-          <button onClick={this.handleReset}>{"Reset"}</button>
+          <GlobeBtn onClick={this.handleZoomIn}>{"Zoom in"}</GlobeBtn>
+          <GlobeBtn onClick={this.handleZoomOut}>{"Zoom out"}</GlobeBtn>
+          <GlobeBtn onClick={this.handleReset}>{"Reset"}</GlobeBtn>
         </ButtonWrapper>
         <div style={wrapperStyles}>
           <Motion
@@ -192,7 +202,7 @@ class AlbersUSA extends Component {
                                 outline: "none"
                               },
                               pressed: {
-                                fill: "#eceff1",
+                                fill: "#1a1a1a",
                                 stroke: "#607D8B",
                                 strokeWidth: 0.75,
                                 outline: "none"
